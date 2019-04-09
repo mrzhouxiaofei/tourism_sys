@@ -154,7 +154,7 @@ var render = function() {
             }
           }
         },
-        [_c("p", [_vm._v("欢迎使用 Element")])]
+        [_c("p", [_vm._v("欢迎使用 ElementUI")])]
       )
     ],
     1
