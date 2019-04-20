@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'BaseController@index');
+Route::get('/menu/get', 'BaseController@getMenu');
