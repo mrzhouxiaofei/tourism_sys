@@ -4,19 +4,15 @@ webpackJsonp([0],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(215)
-}
-var normalizeComponent = __webpack_require__(27)
+var normalizeComponent = __webpack_require__(26)
 /* script */
-var __vue_script__ = __webpack_require__(217)
+var __vue_script__ = __webpack_require__(215)
 /* template */
-var __vue_template__ = __webpack_require__(218)
+var __vue_template__ = __webpack_require__(216)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -53,48 +49,6 @@ module.exports = Component.exports
 /***/ }),
 
 /***/ 215:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(216);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(26)("66ac275b", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7e3bf60e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
-     var newContent = require("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7e3bf60e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 216:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(18)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -155,11 +109,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            wages: [],
+            areas: [],
             keyword: '',
             pagination: {
                 current: 1,
@@ -177,11 +132,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/admin/wage/list', {
+            axios.get('/admin/area/list', {
                 params: params
             }).then(function (res) {
+                console.log(res.data.data);
                 if (res) {
-                    self.wages = res.data.data;
+                    self.areas = res.data.data;
                     self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
@@ -195,7 +151,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(function () {
-                axios.post('/admin/wage/del', {
+                axios.post('/admin/area/delete', {
                     id: id
                 }).then(function (res) {
                     if (res.data.code === 0) {
@@ -233,7 +189,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 218:
+/***/ 216:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -252,9 +208,9 @@ var render = function() {
           _c(
             "el-breadcrumb",
             [
-              _c("el-breadcrumb-item", [_vm._v("工资管理")]),
+              _c("el-breadcrumb-item", [_vm._v("地域管理")]),
               _vm._v(" "),
-              _c("el-breadcrumb-item", [_vm._v("工资列表")])
+              _c("el-breadcrumb-item", [_vm._v("地域列表")])
             ],
             1
           )
@@ -284,11 +240,11 @@ var render = function() {
             [
               _c(
                 "router-link",
-                { attrs: { to: { path: "import" } } },
+                { attrs: { to: { path: "edit" } } },
                 [
                   _c("el-button", [
-                    _c("i", { staticClass: "ion-android-upload" }),
-                    _vm._v(" 导入工资")
+                    _c("i", { staticClass: "ion-plus" }),
+                    _vm._v(" 添加地域")
                   ])
                 ],
                 1
@@ -302,7 +258,7 @@ var render = function() {
             { attrs: { label: "关键字" } },
             [
               _c("el-input", {
-                attrs: { placeholder: "工号 \\ 姓名" },
+                attrs: { placeholder: "地域" },
                 model: {
                   value: _vm.keyword,
                   callback: function($$v) {
@@ -335,31 +291,13 @@ var render = function() {
       _vm._v(" "),
       _c(
         "el-table",
-        { attrs: { data: _vm.wages, border: "" } },
+        { attrs: { data: _vm.areas, border: "" } },
         [
-          _c("el-table-column", { attrs: { prop: "code", label: "工号" } }),
+          _c("el-table-column", { attrs: { prop: "id", label: "ID" } }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "name", label: "姓名" } }),
+          _c("el-table-column", { attrs: { prop: "name", label: "地域名" } }),
           _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "wage_year", label: "工资年份" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "wage_month", label: "工资月份" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "wage_should", label: "应发工资" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "wage_garnishment", label: "扣发工资" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "wage_actual", label: "实发工资" }
-          }),
+          _c("el-table-column", { attrs: { prop: "content", label: "描述" } }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: { label: "操作" },
@@ -372,14 +310,14 @@ var render = function() {
                       "router-link",
                       {
                         attrs: {
-                          to: { path: "detail", query: { id: scope.row.id } }
+                          to: { path: "edit", query: { id: scope.row.id } }
                         }
                       },
                       [
                         _c(
                           "el-button",
-                          { attrs: { size: "small", icon: "more" } },
-                          [_vm._v("详情")]
+                          { attrs: { size: "small", icon: "edit" } },
+                          [_vm._v("编辑")]
                         )
                       ],
                       1

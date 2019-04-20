@@ -13,3 +13,5 @@
 
 Route::get('/', 'BaseController@index');
 Route::get('/menu/get', 'BaseController@getMenu');
+
+Route::get('/admin/area/list', 'AreaController@getAreaList');
