@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -33717,10 +33717,15 @@ __WEBPACK_IMPORTED_MODULE_2__area__["a" /* default */].forEach(function (obj) {
 "use strict";
 // 地域
 /* harmony default export */ __webpack_exports__["a"] = ([{
-  path: "/area/list",
-  component: function component(resolve) {
-    return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(214)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
-  }
+    path: "/area/list",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(214)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/area/edit',
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(215)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
 }]);
 
 /***/ })

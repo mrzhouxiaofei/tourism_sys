@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Node extends Model
 {
@@ -29,9 +30,14 @@ class Node extends Model
     }
 
     private function getMenu() {
-        return  $this->where([
+        $result = DB::table('nodes')
+                    ->where([
                         ['type', '0'],
                         ['status', '0'],
-                    ])->orderBy('sort_factor')->get();
+                    ])
+                    ->orderBy('sort_factor')
+                    ->get();
+
+        return $result;
     }
 }

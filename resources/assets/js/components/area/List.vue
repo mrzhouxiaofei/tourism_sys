@@ -14,11 +14,6 @@
                     <el-button><i class="ion-plus"></i> 添加地域</el-button>
                 </router-link>
             </el-form-item>
-            <!-- <el-form-item>
-                <router-link :to="{ path: 'import' }">
-                    <el-button><i class="ion-android-upload"></i> 导入用户</el-button>
-                </router-link>
-            </el-form-item> -->
 
             <el-form-item label="关键字">
                 <el-input v-model="keyword" placeholder="地域"></el-input>
@@ -37,7 +32,7 @@
                     <router-link :to="{ path: 'edit', query: { id: scope.row.id } }">
                         <el-button size="small" icon="edit">编辑</el-button>
                     </router-link>
-                    <el-button size="small" type="danger" icon="delete" @click="del(scope.row.id)">删除</el-button>
+                    <el-button size="small" type="danger" icon="delete" @click="delete(scope.row.id)">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -76,7 +71,7 @@
                     pageSize: self.pagination.pageSize,
                     keyword: self.keyword
                 };
-                axios.get('/admin/area/list', {
+                axios.get('/admin/area/lists', {
                     params: params
                 }).then((res) => {
                     console.log(res.data.data);
@@ -88,7 +83,7 @@
                     }
                 });
             },
-            del(id) {
+            delete(id) {
                 let self = this;
                 this.$confirm('确认删除吗？', '提示', {
                     confirmButtonText: '确定',

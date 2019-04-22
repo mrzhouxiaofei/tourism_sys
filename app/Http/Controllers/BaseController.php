@@ -28,6 +28,6 @@ class BaseController extends Controller
      */
     public function getMenu() {
         $nodes = new Node;
-        return response()->json($nodes->getFormatMenu());
+        return responseToPage($nodes->getFormatMenu());
     }
 }

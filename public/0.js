@@ -6,9 +6,9 @@ webpackJsonp([0],{
 var disposed = false
 var normalizeComponent = __webpack_require__(26)
 /* script */
-var __vue_script__ = __webpack_require__(215)
+var __vue_script__ = __webpack_require__(216)
 /* template */
-var __vue_template__ = __webpack_require__(216)
+var __vue_template__ = __webpack_require__(217)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48,16 +48,11 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
 //
 //
 //
@@ -132,7 +127,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/admin/area/list', {
+            axios.get('/admin/area/lists', {
                 params: params
             }).then(function (res) {
                 console.log(res.data.data);
@@ -144,7 +139,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         },
-        del: function del(id) {
+        delete: function _delete(id) {
             var self = this;
             this.$confirm('确认删除吗？', '提示', {
                 confirmButtonText: '确定',
@@ -189,7 +184,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -333,7 +328,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.del(scope.row.id)
+                            return delete scope.row.id
                           }
                         }
                       },
