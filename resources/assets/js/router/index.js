@@ -5,9 +5,15 @@ Vue.use(VueRouter);
 let myRouter = [];
 
 // 地域模块
-import user from "./area";
-user.forEach(function(obj) {
-  myRouter.push(obj);
+import area from "./area";
+area.forEach(function(obj) {
+    myRouter.push(obj);
+});
+
+// 景点模块
+import spot from "./spot";
+spot.forEach(function(obj) {
+    myRouter.push(obj);
 });
 
 export default new VueRouter({

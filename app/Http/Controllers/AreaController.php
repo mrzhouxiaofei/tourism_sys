@@ -8,6 +8,18 @@ use App\Models\Area;
 class AreaController extends Controller
 {
     /**
+     * 获取全部地域
+     * @param Request $request
+     * @return array
+     */
+    public function selectAllAreas(Request $request) {
+        return [
+            'success' => true,
+            'areas' => Area::where('status', 0)->get()
+        ];
+    }
+
+    /**
      * 删除地域
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -86,7 +98,7 @@ class AreaController extends Controller
         $pageSize = $request->pageSize;
         $keyword = $request->keyword;
 
-        $areas = Area::getLists($pageSize, $keyword);
+        $areas = Area::getAreaLists($pageSize, $keyword);
 
         if (!empty($areas)) {
             return $areas;

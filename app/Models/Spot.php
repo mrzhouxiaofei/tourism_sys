@@ -5,20 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Area extends Model
+class Spot extends Model
 {
+
     /**
-     * 删除地域
+     * 删除景点
      * @param $id
      * @return mixed
      */
-    public static function deleteArea($id) {
-        $result = DB::table('areas')
-                    ->where('id', $id)
-                    ->update([
-                        'status' => '1',
-                        'updated_at' => getFormatDate()
-                    ]);
+    public static function deleteSpot($id) {
+        $result = DB::table('spots')
+            ->where('id', $id)
+            ->update([
+                'status' => '1',
+                'updated_at' => getFormatDate()
+            ]);
 
         if (!empty($result)) {
             return true;
@@ -28,17 +29,17 @@ class Area extends Model
     }
 
     /**
-     * 添加、编辑地域
+     * 添加、编辑景点
      * @param $user
      * @return bool
      */
-    public static function editArea($id, $area) {
+    public static function editSpot($id, $spot) {
         if(!empty($id)) {
             //编辑
-            $result = DB::table('areas')->where('id', $id)->update($area);
+            $result = DB::table('spots')->where('id', $id)->update($spot);
         } else {
             //添加
-            $result = DB::table('areas')->insertGetId($area);
+            $result = DB::table('spots')->insertGetId($spot);
         }
 
         if (!empty($result)) {
@@ -49,15 +50,16 @@ class Area extends Model
     }
 
     /**
-     * 获取地域列表
+     * 获取景点列表
      * @param [type] $pageSize
      * @param [type] $keyword
      * @return void
      */
-    public static function getAreaLists($pageSize, $keyword) {
-        $result = DB::table('areas')
+    public static function getSpotLists($pageSize, $keyword) {
+        $result = DB::table('spots')
                     ->where('status', '0')
-                    ->where('name', 'like', '%'. $keyword .'%')
+                    ->where('area_name', 'like', '%'. $keyword .'%')
+                    ->orWhere('name', 'like', '%'. $keyword .'%')
                     ->paginate($pageSize);
 
         if (!empty($result)) {

@@ -1,4 +1,4 @@
-webpackJsonp([3],[
+webpackJsonp([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -33693,6 +33693,7 @@ module.exports = function (css) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spot__ = __webpack_require__(213);
 
 
 
@@ -33702,12 +33703,18 @@ var myRouter = [];
 // 地域模块
 
 __WEBPACK_IMPORTED_MODULE_2__area__["a" /* default */].forEach(function (obj) {
-  myRouter.push(obj);
+    myRouter.push(obj);
+});
+
+// 景点模块
+
+__WEBPACK_IMPORTED_MODULE_3__spot__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]({
-  saveScrollPosition: true,
-  routes: myRouter
+    saveScrollPosition: true,
+    routes: myRouter
 }));
 
 /***/ }),
@@ -33719,12 +33726,30 @@ __WEBPACK_IMPORTED_MODULE_2__area__["a" /* default */].forEach(function (obj) {
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/area/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(214)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(215)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/area/edit',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(215)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(216)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}]);
+
+/***/ }),
+/* 213 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// 景点
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/spot/list",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(217)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/spot/edit',
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(224)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
