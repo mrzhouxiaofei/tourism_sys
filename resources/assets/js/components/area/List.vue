@@ -74,7 +74,6 @@
                 axios.get('/admin/area/lists', {
                     params: params
                 }).then((res) => {
-                    console.log(res.data.data);
                     if (res) {
                         self.areas = res.data.data;
                         self.pagination.total = res.data.total;

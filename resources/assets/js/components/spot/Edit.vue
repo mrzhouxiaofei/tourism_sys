@@ -17,8 +17,8 @@
                     <el-form-item label="景点名">
                         <el-input v-model="spot.name" placeholder="请输入景点名"></el-input>
                     </el-form-item>
-                    <el-form-item label="描述">
-                        <el-input v-model="spot.content" placeholder="请输入描述"></el-input>
+                    <el-form-item label="描述" style="display: inline-block">
+                        <UEditor @ready="onReadyContent" style="width:800px;"></UEditor>
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" @click="onSave">保 存</el-button>
@@ -34,10 +34,12 @@
 
 <script>
     import AreaSelect from '../widget/AreaSelect.vue';
+    import UEditor from '../widget/UEditor';
 
     export default {
         components: {
-            AreaSelect
+            AreaSelect,
+            UEditor
         },
         data() {
             return {
@@ -47,12 +49,15 @@
                 },
                 spot: {  // 景点
                     id: 0,
-                    name: '',
-                    content: ''
+                    name: ''
                 },
+                spot_content_ueditor: null,  // 描述
             }
         },
         methods: {
+            onReadyContent(ueditor) {
+                this.spot_content_ueditor = ueditor;
+            },
             AreaChange(now) {
                 if (now) {
                     this.area.area_id = now.id;
@@ -64,12 +69,13 @@
             },
             onSave() {
                 let self = this;
+                let spot_content = self.spot_content_ueditor.getContent();
                 let params = {
                     id: self.spot.id,
                     area_id: self.area.area_id,
                     area_name: self.area.area_name,
                     name: self.spot.name,
-                    content: self.spot.content
+                    content: spot_content
                 };
                 axios.post('/admin/spot/edit', params).then((res) => {
                     console.log(res);
@@ -104,7 +110,7 @@
                         self.area.area_id = res.data.result.area_id;
                         self.area.area_name = res.data.result.area_name;
                         self.spot.name = res.data.result.name;
-                        self.spot.content = res.data.result.content;
+                        self.spot_content_ueditor.setContent(res.data.result.content);
                     } else {
                         self.$message({
                             message: res.data.msg,

@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 215:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(26)
 /* script */
-var __vue_script__ = __webpack_require__(218)
+var __vue_script__ = __webpack_require__(223)
 /* template */
-var __vue_template__ = __webpack_require__(219)
+var __vue_template__ = __webpack_require__(224)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/area/List.vue"
+Component.options.__file = "resources/assets/js/components/spot/List.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7e3bf60e", Component.options)
+    hotAPI.createRecord("data-v-69179024", Component.options)
   } else {
-    hotAPI.reload("data-v-7e3bf60e", Component.options)
+    hotAPI.reload("data-v-69179024", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 218:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,7 +109,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            areas: [],
+            spots: [],
             keyword: '',
             pagination: {
                 current: 1,
@@ -127,26 +127,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/admin/area/lists', {
+            axios.get('/admin/spot/lists', {
                 params: params
             }).then(function (res) {
-                console.log(res.data.data);
                 if (res) {
-                    self.areas = res.data.data;
+                    self.spots = res.data.data;
                     self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
                 }
             });
         },
-        deleteArea: function deleteArea(id) {
+        deleteSpot: function deleteSpot(id) {
             var self = this;
             this.$confirm('确认删除吗？', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(function () {
-                axios.post('/admin/area/delete', {
+                axios.post('/admin/spot/delete', {
                     id: id
                 }).then(function (res) {
                     if (res.data.code === 0) {
@@ -184,7 +183,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 219:
+/***/ 224:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -203,9 +202,9 @@ var render = function() {
           _c(
             "el-breadcrumb",
             [
-              _c("el-breadcrumb-item", [_vm._v("地域管理")]),
+              _c("el-breadcrumb-item", [_vm._v("景点管理")]),
               _vm._v(" "),
-              _c("el-breadcrumb-item", [_vm._v("地域列表")])
+              _c("el-breadcrumb-item", [_vm._v("景点列表")])
             ],
             1
           )
@@ -239,7 +238,7 @@ var render = function() {
                 [
                   _c("el-button", [
                     _c("i", { staticClass: "ion-plus" }),
-                    _vm._v(" 添加地域")
+                    _vm._v(" 添加景点")
                   ])
                 ],
                 1
@@ -253,7 +252,7 @@ var render = function() {
             { attrs: { label: "关键字" } },
             [
               _c("el-input", {
-                attrs: { placeholder: "地域名" },
+                attrs: { placeholder: "地域名 / 景点名" },
                 model: {
                   value: _vm.keyword,
                   callback: function($$v) {
@@ -286,13 +285,15 @@ var render = function() {
       _vm._v(" "),
       _c(
         "el-table",
-        { attrs: { data: _vm.areas, border: "" } },
+        { attrs: { data: _vm.spots, border: "" } },
         [
           _c("el-table-column", { attrs: { prop: "id", label: "ID" } }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "name", label: "地域名" } }),
+          _c("el-table-column", {
+            attrs: { prop: "area_name", label: "地域名" }
+          }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "content", label: "描述" } }),
+          _c("el-table-column", { attrs: { prop: "name", label: "景点名" } }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: { label: "操作" },
@@ -328,7 +329,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.deleteArea(scope.row.id)
+                            return _vm.deleteSpot(scope.row.id)
                           }
                         }
                       },
@@ -367,7 +368,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-7e3bf60e", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-69179024", module.exports)
   }
 }
 

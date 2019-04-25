@@ -27,7 +27,6 @@
             <el-table-column prop="id" label="ID"></el-table-column>
             <el-table-column prop="area_name" label="地域名"></el-table-column>
             <el-table-column prop="name" label="景点名"></el-table-column>
-            <el-table-column prop="content" label="描述"></el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">
                     <router-link :to="{ path: 'edit', query: { id: scope.row.id } }">
@@ -75,7 +74,6 @@
                 axios.get('/admin/spot/lists', {
                     params: params
                 }).then((res) => {
-                    console.log(res.data.data);
                     if (res) {
                         self.spots = res.data.data;
                         self.pagination.total = res.data.total;
