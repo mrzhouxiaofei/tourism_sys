@@ -56,11 +56,15 @@ class Spot extends Model
      * @return void
      */
     public static function getSpotLists($pageSize, $keyword) {
-        $result = DB::table('spots')
-                    ->where('status', '0')
-                    ->where('area_name', 'like', '%'. $keyword .'%')
-                    ->orWhere('name', 'like', '%'. $keyword .'%')
-                    ->paginate($pageSize);
+        $query = DB::table('spots')->where('status', '0');
+
+        if ($keyword) {
+            $query->where(function ($q) use ($keyword) {
+                $q->orWhere('area_name', 'like', $keyword . '%')
+                    ->orWhere('name', 'like', $keyword . '%');
+            });
+        }
+        $result = $query->paginate($pageSize);
 
         if (!empty($result)) {
             return responseToPage($result);

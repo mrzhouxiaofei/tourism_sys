@@ -30,9 +30,9 @@
             <el-table-column label="操作">
                 <template slot-scope="scope">
                     <router-link :to="{ path: 'edit', query: { id: scope.row.id } }">
-                        <el-button size="small" icon="edit">编辑</el-button>
+                        <el-button size="small" icon="el-icon-edit">编辑</el-button>
                     </router-link>
-                    <el-button size="small" type="danger" icon="delete" @click="deleteSpot(scope.row.id)">删除</el-button>
+                    <el-button size="small" type="danger" icon="el-icon-delete" @click="deleteSpot(scope.row.id)">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>

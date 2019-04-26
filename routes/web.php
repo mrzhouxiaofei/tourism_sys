@@ -29,4 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('spot/get', 'SpotController@getSpot');
     Route::post('spot/edit', 'SpotController@editSpot');
     Route::post('spot/delete', 'SpotController@deleteSpot');
+
+    // 攻略
+    Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
+    Route::post('guideline/delete', 'GuidelineController@deleteGuideline');
 });
