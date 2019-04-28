@@ -64,7 +64,7 @@ class Spot extends Model
                     ->orWhere('name', 'like', $keyword . '%');
             });
         }
-        $result = $query->paginate($pageSize);
+        $result = $query->orderBy('created_at', 'desc')->paginate($pageSize);
 
         if (!empty($result)) {
             return responseToPage($result);

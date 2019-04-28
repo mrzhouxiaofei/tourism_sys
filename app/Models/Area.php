@@ -58,6 +58,7 @@ class Area extends Model
         $result = DB::table('areas')
                     ->where('status', '0')
                     ->where('name', 'like', '%'. $keyword .'%')
+                    ->orderBy('created_at', 'desc')
                     ->paginate($pageSize);
 
         if (!empty($result)) {

@@ -42,7 +42,7 @@ class Guideline extends Model
                     ->orWhere('author', 'like', $keyword . '%');
             });
         }
-        $result = $query->paginate($pageSize);
+        $result = $query->orderBy('created_at', 'desc')->paginate($pageSize);
 
         if (!empty($result)) {
             return responseToPage($result);

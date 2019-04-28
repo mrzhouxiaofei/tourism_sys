@@ -1,4 +1,4 @@
-webpackJsonp([6],[
+webpackJsonp([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -33695,6 +33695,7 @@ module.exports = function (css) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spot__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__guideline__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message__ = __webpack_require__(215);
 
 
 
@@ -33719,6 +33720,12 @@ __WEBPACK_IMPORTED_MODULE_4__guideline__["a" /* default */].forEach(function (ob
     myRouter.push(obj);
 });
 
+// 留言模块
+
+__WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
+});
+
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]({
     saveScrollPosition: true,
     routes: myRouter
@@ -33733,12 +33740,12 @@ __WEBPACK_IMPORTED_MODULE_4__guideline__["a" /* default */].forEach(function (ob
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/area/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(216)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(217)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/area/edit',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(217)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(218)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33751,12 +33758,12 @@ __WEBPACK_IMPORTED_MODULE_4__guideline__["a" /* default */].forEach(function (ob
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/spot/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(218)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(219)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/spot/edit',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(219)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(220)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33769,8 +33776,24 @@ __WEBPACK_IMPORTED_MODULE_4__guideline__["a" /* default */].forEach(function (ob
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(220)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(221)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
+}]);
+
+/***/ }),
+/* 215 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// 留言
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/message/list",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(222)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/message/edit'
+    // component: resolve =>void(require(['../components/message/Edit.vue'], resolve))
 }]);
 
 /***/ })

@@ -33,4 +33,9 @@ Route::group(['prefix' => 'admin'], function () {
     // 攻略
     Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
     Route::post('guideline/delete', 'GuidelineController@deleteGuideline');
+
+    // 留言
+    Route::get('message/lists', 'MessageController@getMessageLists');
+    Route::post('message/delete', 'MessageController@deleteMessage');
+    Route::post('message/answer', 'MessageController@answerMessage');
 });

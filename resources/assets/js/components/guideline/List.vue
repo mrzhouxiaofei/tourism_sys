@@ -18,7 +18,7 @@
         </el-form>
 
         <el-table :data="guidelines" border>
-            <el-table-column prop="id" label="ID"></el-table-column>
+            <el-table-column type="index" label="#"></el-table-column>
             <el-table-column prop="title" label="标题"></el-table-column>
             <el-table-column prop="author" label="作者"></el-table-column>
             <el-table-column prop="created_at" label="发布时间"></el-table-column>

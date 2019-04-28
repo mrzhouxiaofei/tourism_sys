@@ -24,7 +24,7 @@
         </el-form>
 
         <el-table :data="spots" border>
-            <el-table-column prop="id" label="ID"></el-table-column>
+            <el-table-column type="index" label="#"></el-table-column>
             <el-table-column prop="area_name" label="地域名"></el-table-column>
             <el-table-column prop="name" label="景点名"></el-table-column>
             <el-table-column label="操作">
