@@ -26,3 +26,21 @@ function responseToPage($result) {
 function getFormatDate() {
     return date("Y-m-d H:i:s");
 }
+
+/**
+ * 从 session 中获取用户信息
+ * @return \Illuminate\Session\SessionManager|\Illuminate\Session\Store|mixed
+ */
+function get_session_user() {
+    return session('user');
+}
+
+/**
+ * 获取用户密码的加密字符串
+ * @param $password
+ * @param $salt
+ * @return string
+ */
+function encrypt_password($password, $salt) {
+    return md5(md5($password) . $salt);
+}

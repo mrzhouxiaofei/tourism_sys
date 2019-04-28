@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', 'BaseController@index');
-Route::get('/menu/get', 'BaseController@getMenu');
+Route::group(['middleware' => ['check.login']], function () {
+    Route::get('/', 'BaseController@index');
+    Route::get('/menu/get', 'BaseController@getMenu');
+});
 
+Route::get('/login', function (){
+    return view('login');
+});
+Route::post('/login', 'UserController@login');
+Route::get('/logout', 'UserController@logout');
 
 Route::group(['prefix' => 'admin'], function () {
 

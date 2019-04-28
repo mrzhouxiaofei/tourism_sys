@@ -28,6 +28,12 @@ message.forEach(function(obj) {
     myRouter.push(obj);
 });
 
+// 用户模块
+import user from "./user";
+user.forEach(function (obj) {
+    myRouter.push(obj);
+});
+
 export default new VueRouter({
   saveScrollPosition: true,
   routes: myRouter
