@@ -51,7 +51,7 @@
             </el-table-column>
             <el-table-column type="index" label="#"></el-table-column>
             <el-table-column prop="author" label="留言人"></el-table-column>
-            <el-table-column prop="content" label="留言内容"></el-table-column>
+            <el-table-column prop="content" label="留言内容" :formatter="formatter"></el-table-column>
             <el-table-column prop="created_at" label="留言时间"></el-table-column>
             <el-table-column
                     prop="type"
@@ -129,6 +129,13 @@
             }
         },
         methods: {
+            formatter(row, column) {
+                if (row.content.length > 15) {
+                    return (row.content.substring(0,15) + '~~~');
+                } else {
+                    return row.content;
+                }
+            },
             confirmAnswerMessage() {
                 let self = this;
                 axios.post('/admin/message/answer', {

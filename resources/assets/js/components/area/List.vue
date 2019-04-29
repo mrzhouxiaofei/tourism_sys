@@ -26,7 +26,7 @@
         <el-table :data="areas" border>
             <el-table-column type="index" label="#"></el-table-column>
             <el-table-column prop="name" label="地域名"></el-table-column>
-            <el-table-column prop="content" label="描述"></el-table-column>
+            <el-table-column prop="content" label="描述" :formatter="formatter"></el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">
                     <router-link :to="{ path: 'edit', query: { id: scope.row.id } }">
@@ -64,6 +64,13 @@
             }
         },
         methods: {
+            formatter(row, column) {
+                if (row.content.length > 20) {
+                    return (row.content.substring(0,20) + '~~~');
+                } else {
+                    return row.content;
+                }
+            },
             search() {
                 let self = this;
                 let params = {

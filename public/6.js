@@ -120,6 +120,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        formatter: function formatter(row, column) {
+            if (row.content.length > 20) {
+                return row.content.substring(0, 20) + '~~~';
+            } else {
+                return row.content;
+            }
+        },
         search: function search() {
             var self = this;
             var params = {
@@ -291,7 +298,9 @@ var render = function() {
           _vm._v(" "),
           _c("el-table-column", { attrs: { prop: "name", label: "地域名" } }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "content", label: "描述" } }),
+          _c("el-table-column", {
+            attrs: { prop: "content", label: "描述", formatter: _vm.formatter }
+          }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: { label: "操作" },
