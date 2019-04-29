@@ -10,8 +10,8 @@
     }
 </style>
 <script>
-    import '../../../library/js/ueditor1.4.3/ueditor.config.js';
-    import '../../../library/js/ueditor1.4.3/ueditor.all.js';
+    import '../../../../library/js/ueditor1.4.3/ueditor.config.js';
+    import '../../../../library/js/ueditor1.4.3/ueditor.all.js';
 
     export default {
         props: {

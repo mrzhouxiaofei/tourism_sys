@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('/', 'BaseController@index');
+
 Route::group(['middleware' => ['check.login']], function () {
-    Route::get('/', 'BaseController@index');
+//    Route::get('/', 'BaseController@index');
     Route::get('/menu/get', 'BaseController@getMenu');
 });
 

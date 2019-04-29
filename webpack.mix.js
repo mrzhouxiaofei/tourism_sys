@@ -12,7 +12,8 @@ let mix = require("laravel-mix");
  */
 
 mix
-  .js("resources/assets/js/app.js", "public/js")
+  .js("resources/assets/js/admin/admin.js", "public/js")
+  .js("resources/assets/js/front/front.js", "public/js")
   .extract(["vue", "vue-router", "element-ui"])
   .copy("resources/assets/sass/app.css", "public/css")
   .copy("resources/assets/library/css", "public/css")

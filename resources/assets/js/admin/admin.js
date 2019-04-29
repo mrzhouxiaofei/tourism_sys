@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
+require("../bootstrap");
 
 window.Vue = require("vue");
 
@@ -14,7 +14,7 @@ window.Vue = require("vue");
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import App from "./App.vue";
+import Admin from "./Admin.vue";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
@@ -25,5 +25,5 @@ import router from "./router/index";
 const app = new Vue({
   el: "#app",
   router,
-  render: h => h(App)
+  render: h => h(Admin)
 });

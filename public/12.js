@@ -1,14 +1,14 @@
-webpackJsonp([6],{
+webpackJsonp([12],{
 
-/***/ 240:
+/***/ 280:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(251)
+var __vue_script__ = __webpack_require__(281)
 /* template */
-var __vue_template__ = __webpack_require__(252)
+var __vue_template__ = __webpack_require__(282)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/admin/components/spot/List.vue"
+Component.options.__file = "resources/assets/js/front/components/Test.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-265b4938", Component.options)
+    hotAPI.createRecord("data-v-74873a3a", Component.options)
   } else {
-    hotAPI.reload("data-v-265b4938", Component.options)
+    hotAPI.reload("data-v-74873a3a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 251:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,7 +109,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            spots: [],
+            areas: [],
             keyword: '',
             pagination: {
                 current: 1,
@@ -120,6 +120,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        formatter: function formatter(row, column) {
+            if (row.content.length > 20) {
+                return row.content.substring(0, 20) + '~~~';
+            } else {
+                return row.content;
+            }
+        },
         search: function search() {
             var self = this;
             var params = {
@@ -127,25 +134,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/admin/spot/lists', {
+            axios.get('/admin/area/lists', {
                 params: params
             }).then(function (res) {
                 if (res) {
-                    self.spots = res.data.data;
+                    self.areas = res.data.data;
                     self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
                 }
             });
         },
-        deleteSpot: function deleteSpot(id) {
+        deleteArea: function deleteArea(id) {
             var self = this;
             this.$confirm('确认删除吗？', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(function () {
-                axios.post('/admin/spot/delete', {
+                axios.post('/admin/area/delete', {
                     id: id
                 }).then(function (res) {
                     if (res.data.code === 0) {
@@ -183,7 +190,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 252:
+/***/ 282:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -202,9 +209,9 @@ var render = function() {
           _c(
             "el-breadcrumb",
             [
-              _c("el-breadcrumb-item", [_vm._v("景点管理")]),
+              _c("el-breadcrumb-item", [_vm._v("地域管理")]),
               _vm._v(" "),
-              _c("el-breadcrumb-item", [_vm._v("景点列表")])
+              _c("el-breadcrumb-item", [_vm._v("地域列表")])
             ],
             1
           )
@@ -238,7 +245,7 @@ var render = function() {
                 [
                   _c("el-button", [
                     _c("i", { staticClass: "ion-plus" }),
-                    _vm._v(" 添加景点")
+                    _vm._v(" 添加地域")
                   ])
                 ],
                 1
@@ -252,7 +259,7 @@ var render = function() {
             { attrs: { label: "关键字" } },
             [
               _c("el-input", {
-                attrs: { placeholder: "地域名 / 景点名" },
+                attrs: { placeholder: "地域名" },
                 model: {
                   value: _vm.keyword,
                   callback: function($$v) {
@@ -285,15 +292,15 @@ var render = function() {
       _vm._v(" "),
       _c(
         "el-table",
-        { attrs: { data: _vm.spots, border: "" } },
+        { attrs: { data: _vm.areas, border: "" } },
         [
           _c("el-table-column", { attrs: { type: "index", label: "#" } }),
           _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "area_name", label: "地域名" }
-          }),
+          _c("el-table-column", { attrs: { prop: "name", label: "地域名" } }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "name", label: "景点名" } }),
+          _c("el-table-column", {
+            attrs: { prop: "content", label: "描述", formatter: _vm.formatter }
+          }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: { label: "操作" },
@@ -329,7 +336,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.deleteSpot(scope.row.id)
+                            return _vm.deleteArea(scope.row.id)
                           }
                         }
                       },
@@ -368,7 +375,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-265b4938", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-74873a3a", module.exports)
   }
 }
 

@@ -14,10 +14,10 @@ class BaseController extends Controller
         if ($user) {
             if ($user->type == User::TYPE_MANAGER) {
                 // 管理员
-                return view('index');
+                return view('admin.index');
             } else if ($user->type == User::TYPE_COMMON) {
                 // 普通用户
-                return view('common.index');
+                return view('front.index');
             }
         }
 
