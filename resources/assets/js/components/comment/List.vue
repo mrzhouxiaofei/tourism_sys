@@ -1,0 +1,168 @@
+<template>
+    <div>
+        <div class="gm-breadcrumb">
+            <i class="ion-ios-home gm-home"></i>
+            <el-breadcrumb>
+                <el-breadcrumb-item>评论管理</el-breadcrumb-item>
+                <el-breadcrumb-item>评论列表</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+
+        <el-form :inline="true" @keydown.enter.native="search">
+            <el-form-item label="关键字">
+                <el-input v-model="keyword" placeholder="攻略标题 / 评论人"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" icon="search" @click="search">查询</el-button>
+            </el-form-item>
+        </el-form>
+
+        <el-table :data="comments" border>
+            <el-table-column type="expand">
+                <template slot-scope="props">
+                    <el-form label-position="left" class="demo-table-expand">
+                        <el-card>
+                            <el-form-item label="攻略标题">
+                                <span>{{ props.row.guideline_title }}</span>
+                            </el-form-item>
+                            <el-form-item label="攻略地址">
+                                <span><el-button type="text" @click="jumpLink(props.row.guideline_url)">{{ props.row.guideline_url }}</el-button></span>
+                            </el-form-item>
+                            <el-form-item label="评论人">
+                                <span>{{ props.row.author }}</span>
+                            </el-form-item>
+                            <el-form-item label="评论时间">
+                                <span>{{ props.row.created_at }}</span>
+                            </el-form-item>
+                            <el-form-item label="评论内容">
+                                <span>{{ props.row.content }}</span>
+                            </el-form-item>
+                        </el-card>
+                    </el-form>
+                </template>
+            </el-table-column>
+            <el-table-column type="index" label="#"></el-table-column>
+            <el-table-column prop="guideline_title" label="攻略标题"></el-table-column>
+            <el-table-column prop="author" label="评论人"></el-table-column>
+            <el-table-column prop="content" label="评论内容" :formatter="formatter"></el-table-column>
+            <el-table-column prop="created_at" label="评论时间"></el-table-column>
+            <el-table-column label="操作">
+                <template slot-scope="scope">
+                    <el-button size="small" type="danger" icon="el-icon-delete" @click="deleteComment(scope.row.id)">删除</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+
+        <el-pagination
+                style="padding: 1rem 0;"
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="pagination.current"
+                :page-sizes="[10, 20, 50, 100]"
+                :page-size="pagination.pageSize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="pagination.total">
+        </el-pagination>
+    </div>
+</template>
+
+<style>
+    .demo-table-expand {
+        font-size: 0;
+    }
+    .demo-table-expand label {
+        width: 90px;
+        color: #99a9bf;
+    }
+    .demo-table-expand .el-form-item {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 50%;
+    }
+</style>
+
+<script>
+    export default {
+        data() {
+            return {
+                comments: [],
+                keyword: '',
+                pagination: {
+                    current: 1,
+                    total: 0,
+                    pageSize: 20
+                }
+            }
+        },
+        methods: {
+            formatter(row, column) {
+                if (row.content.length > 10) {
+                    return (row.content.substring(0,10) + '~~~');
+                } else {
+                    return row.content;
+                }
+            },
+            jumpLink(url) {
+                window.open(url);
+            },
+            search() {
+                let self = this;
+                let params = {
+                    page: self.pagination.current,
+                    pageSize: self.pagination.pageSize,
+                    keyword: self.keyword
+                };
+                axios.get('/admin/comment/lists', {
+                    params: params
+                }).then((res) => {
+                    if (res) {
+                        self.comments = res.data.data;
+                        self.pagination.total = res.data.total;
+                    } else {
+                        console.log(res.data.msg);
+                    }
+                });
+            },
+            deleteComment(id) {
+                let self = this;
+                this.$confirm('确认删除吗？', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    axios.post('/admin/comment/delete', {
+                        id: id
+                    }).then((res) => {
+                        if (res.data.code === 0){
+                            self.$message({
+                                title: '提示',
+                                message: res.data.msg,
+                                type: 'success'
+                            });
+                            self.search();
+                        } else {
+                            self.$message({
+                                title: '提示',
+                                message: res.data.msg,
+                                type: 'warning'
+                            });
+                        }
+                    });
+                }).catch(() => {});
+            },
+            handleSizeChange(val) {
+                this.pagination.pageSize = val;
+                this.search();
+                console.log(`每页 ${val} 条`);
+            },
+            handleCurrentChange(val) {
+                this.pagination.current = val;
+                this.search();
+                console.log(`当前页: ${val}`);
+            }
+        },
+        mounted() {
+            this.search();
+        }
+    }
+</script>

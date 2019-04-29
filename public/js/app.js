@@ -1,4 +1,4 @@
-webpackJsonp([7],[
+webpackJsonp([9],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -33695,7 +33695,9 @@ module.exports = function (css) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spot__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__guideline__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__message__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__comment__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__message__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user__ = __webpack_require__(217);
 
 
 
@@ -33720,9 +33722,21 @@ __WEBPACK_IMPORTED_MODULE_4__guideline__["a" /* default */].forEach(function (ob
     myRouter.push(obj);
 });
 
+// 评论模块
+
+__WEBPACK_IMPORTED_MODULE_5__comment__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
+});
+
 // 留言模块
 
-__WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj) {
+__WEBPACK_IMPORTED_MODULE_6__message__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
+});
+
+// 用户模块
+
+__WEBPACK_IMPORTED_MODULE_7__user__["a" /* default */].forEach(function (obj) {
     myRouter.push(obj);
 });
 
@@ -33740,12 +33754,12 @@ __WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/area/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(217)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(219)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/area/edit',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(218)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(7).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(220)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33758,12 +33772,12 @@ __WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/spot/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(219)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(221)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/spot/edit',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(220)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(222)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33776,7 +33790,7 @@ __WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(221)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(223)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33785,15 +33799,41 @@ __WEBPACK_IMPORTED_MODULE_5__message__["a" /* default */].forEach(function (obj)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// 评论
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/comment/list",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(224)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}]);
+
+/***/ }),
+/* 216 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 // 留言
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/message/list",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(222)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(225)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/message/edit'
     // component: resolve =>void(require(['../components/message/Edit.vue'], resolve))
+}]);
+
+/***/ }),
+/* 217 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// 用户
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/user/list",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(226)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
 }]);
 
 /***/ })

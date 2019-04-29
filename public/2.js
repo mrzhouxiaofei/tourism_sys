@@ -1,18 +1,18 @@
 webpackJsonp([2],{
 
-/***/ 222:
+/***/ 226:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(245)
+  __webpack_require__(255)
 }
 var normalizeComponent = __webpack_require__(26)
 /* script */
-var __vue_script__ = __webpack_require__(247)
+var __vue_script__ = __webpack_require__(257)
 /* template */
-var __vue_template__ = __webpack_require__(248)
+var __vue_template__ = __webpack_require__(258)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/message/List.vue"
+Component.options.__file = "resources/assets/js/components/user/List.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1244dc5d", Component.options)
+    hotAPI.createRecord("data-v-b89ea10a", Component.options)
   } else {
-    hotAPI.reload("data-v-1244dc5d", Component.options)
+    hotAPI.reload("data-v-b89ea10a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 245:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(246);
+var content = __webpack_require__(256);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(27)("fdef6670", content, false, {});
+var update = __webpack_require__(27)("e455e284", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1244dc5d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
-     var newContent = require("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1244dc5d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
+   module.hot.accept("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b89ea10a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
+     var newContent = require("!!../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b89ea10a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 246:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(18)(false);
@@ -94,7 +94,7 @@ exports.push([module.i, "\n.demo-table-expand {\n    font-size: 0;\n}\n.demo-tab
 
 /***/ }),
 
-/***/ 247:
+/***/ 257:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -205,22 +205,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            messages: [],
-            answerMessageId: 0,
-            answerMessageFlag: false,
-            comment: '',
+            users: [],
             keyword: '',
             pagination: {
                 current: 1,
@@ -231,36 +220,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        confirmAnswerMessage: function confirmAnswerMessage() {
-            var _this = this;
-
-            var self = this;
-            axios.post('/admin/message/answer', {
-                id: self.answerMessageId,
-                content: self.comment
-            }).then(function (res) {
-                if (res.data.code === 0) {
-                    self.$message({
-                        title: '提示',
-                        message: res.data.msg,
-                        type: 'success'
-                    });
-                    self.answerMessageId = 0;
-                    _this.answerMessageFlag = false;
-                    self.search();
-                } else {
-                    self.$message({
-                        title: '提示',
-                        message: res.data.msg,
-                        type: 'warning'
-                    });
-                }
-            });
-        },
-        openAnswerMessage: function openAnswerMessage(id) {
-            this.answerMessageId = id;
-            this.answerMessageFlag = true;
-        },
         filterTag: function filterTag(value, row, column) {
             var property = column['property'];
             return row[property] === value;
@@ -272,27 +231,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/admin/message/lists', {
+            axios.get('/admin/user/lists', {
                 params: params
             }).then(function (res) {
                 if (res) {
-                    self.messages = res.data.data;
-                    console.log(self.messages);
+                    self.users = res.data.data;
                     self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
                 }
             });
         },
-        deleteMessage: function deleteMessage(id) {
+        editStatus: function editStatus(row) {
             var self = this;
-            this.$confirm('确认删除吗？', '提示', {
+            var id = row.id;
+            var status = row.status === '1' ? '0' : '1';
+            this.$confirm('确认执行吗？', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(function () {
-                axios.post('/admin/message/delete', {
-                    id: id
+                axios.post('/admin/user/editStatus', {
+                    id: id,
+                    status: status
                 }).then(function (res) {
                     if (res.data.code === 0) {
                         self.$message({
@@ -329,7 +290,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 248:
+/***/ 258:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -348,9 +309,9 @@ var render = function() {
           _c(
             "el-breadcrumb",
             [
-              _c("el-breadcrumb-item", [_vm._v("留言管理")]),
+              _c("el-breadcrumb-item", [_vm._v("用户管理")]),
               _vm._v(" "),
-              _c("el-breadcrumb-item", [_vm._v("留言列表")])
+              _c("el-breadcrumb-item", [_vm._v("用户列表")])
             ],
             1
           )
@@ -380,7 +341,7 @@ var render = function() {
             { attrs: { label: "关键字" } },
             [
               _c("el-input", {
-                attrs: { placeholder: "留言人" },
+                attrs: { placeholder: "用户名 / 昵称" },
                 model: {
                   value: _vm.keyword,
                   callback: function($$v) {
@@ -413,7 +374,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "el-table",
-        { attrs: { data: _vm.messages, border: "" } },
+        { attrs: { data: _vm.users, border: "" } },
         [
           _c("el-table-column", {
             attrs: { type: "expand" },
@@ -432,95 +393,42 @@ var render = function() {
                         _c(
                           "el-card",
                           [
-                            _c("el-form-item", { attrs: { label: "留言人" } }, [
-                              _c("span", [_vm._v(_vm._s(props.row.author))])
+                            _c("el-form-item", { attrs: { label: "用户名" } }, [
+                              _c("span", [_vm._v(_vm._s(props.row.username))])
+                            ]),
+                            _vm._v(" "),
+                            _c("el-form-item", { attrs: { label: "昵称" } }, [
+                              _c("span", [_vm._v(_vm._s(props.row.nickname))])
+                            ]),
+                            _vm._v(" "),
+                            _c("el-form-item", { attrs: { label: "性别" } }, [
+                              props.row.sex === 0
+                                ? _c("span", [_vm._v("女")])
+                                : props.row.sex === 0
+                                ? _c("span", [_vm._v("男")])
+                                : _c("span", [_vm._v("保密")])
+                            ]),
+                            _vm._v(" "),
+                            _c("el-form-item", { attrs: { label: "手机号" } }, [
+                              _c("span", [_vm._v(_vm._s(props.row.phone))])
+                            ]),
+                            _vm._v(" "),
+                            _c("el-form-item", { attrs: { label: "城市" } }, [
+                              _c("span", [_vm._v(_vm._s(props.row.city))])
                             ]),
                             _vm._v(" "),
                             _c(
                               "el-form-item",
-                              { attrs: { label: "留言时间" } },
+                              { attrs: { label: "注册时间" } },
                               [
                                 _c("span", [
                                   _vm._v(_vm._s(props.row.created_at))
                                 ])
                               ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "el-form-item",
-                              { attrs: { label: "留言内容" } },
-                              [_c("span", [_vm._v(_vm._s(props.row.content))])]
-                            ),
-                            _vm._v(" "),
-                            props.row.type === "0"
-                              ? _c(
-                                  "el-form-item",
-                                  [
-                                    _c(
-                                      "el-button",
-                                      {
-                                        attrs: {
-                                          size: "small",
-                                          type: "primary"
-                                        },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.openAnswerMessage(
-                                              props.row.id
-                                            )
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("回 复")]
-                                    )
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
+                            )
                           ],
                           1
-                        ),
-                        _vm._v(" "),
-                        props.row.type === "1"
-                          ? _c(
-                              "el-card",
-                              { staticStyle: { "margin-top": "10px" } },
-                              [
-                                _c(
-                                  "el-form-item",
-                                  { attrs: { label: "回复人" } },
-                                  [
-                                    _c("span", [
-                                      _vm._v(_vm._s(props.row.comment.author))
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "el-form-item",
-                                  { attrs: { label: "回复时间" } },
-                                  [
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(props.row.comment.created_at)
-                                      )
-                                    ])
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "el-form-item",
-                                  { attrs: { label: "回复内容" } },
-                                  [
-                                    _c("span", [
-                                      _vm._v(_vm._s(props.row.comment.content))
-                                    ])
-                                  ]
-                                )
-                              ],
-                              1
-                            )
-                          : _vm._e()
+                        )
                       ],
                       1
                     )
@@ -532,23 +440,19 @@ var render = function() {
           _vm._v(" "),
           _c("el-table-column", { attrs: { type: "index", label: "#" } }),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "author", label: "留言人" } }),
-          _vm._v(" "),
           _c("el-table-column", {
-            attrs: { prop: "content", label: "留言内容" }
+            attrs: { prop: "username", label: "用户名" }
           }),
           _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "created_at", label: "留言时间" }
-          }),
+          _c("el-table-column", { attrs: { prop: "nickname", label: "昵称" } }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: {
-              prop: "type",
+              prop: "status",
               label: "状态",
               filters: [
-                { text: "未回复", value: "0" },
-                { text: "已回复", value: "1" }
+                { text: "正常", value: "0" },
+                { text: "禁用", value: "1" }
               ],
               "filter-method": _vm.filterTag
             },
@@ -561,13 +465,13 @@ var render = function() {
                       "el-tag",
                       {
                         attrs: {
-                          type: scope.row.type === "0" ? "danger" : "info"
+                          type: scope.row.status === "0" ? "success" : "danger"
                         }
                       },
                       [
-                        scope.row.type === "0"
-                          ? _c("span", [_vm._v("未回复")])
-                          : _c("span", [_vm._v("已回复")])
+                        scope.row.status === "0"
+                          ? _c("span", [_vm._v("正常")])
+                          : _c("span", [_vm._v("禁用")])
                       ]
                     )
                   ]
@@ -588,83 +492,26 @@ var render = function() {
                       {
                         attrs: {
                           size: "small",
-                          type: "danger",
-                          icon: "el-icon-delete"
+                          type: scope.row.status === "0" ? "danger" : "success",
+                          icon: "el-icon-edit"
                         },
                         on: {
                           click: function($event) {
-                            return _vm.deleteMessage(scope.row.id)
+                            return _vm.editStatus(scope.row)
                           }
                         }
                       },
-                      [_vm._v("删除")]
+                      [
+                        scope.row.status === "0"
+                          ? _c("span", [_vm._v("禁用")])
+                          : _c("span", [_vm._v("启用")])
+                      ]
                     )
                   ]
                 }
               }
             ])
           })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "el-dialog",
-        {
-          attrs: {
-            title: "回复内容",
-            visible: _vm.answerMessageFlag,
-            width: "30%"
-          },
-          on: {
-            "update:visible": function($event) {
-              _vm.answerMessageFlag = $event
-            }
-          }
-        },
-        [
-          _c(
-            "el-form",
-            [
-              _c(
-                "el-form-item",
-                [
-                  _c("el-input", {
-                    attrs: { type: "textarea", rows: 4 },
-                    model: {
-                      value: _vm.comment,
-                      callback: function($$v) {
-                        _vm.comment = $$v
-                      },
-                      expression: "comment"
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              staticClass: "dialog-footer",
-              attrs: { slot: "footer" },
-              slot: "footer"
-            },
-            [
-              _c(
-                "el-button",
-                {
-                  attrs: { size: "small", type: "primary" },
-                  on: { click: _vm.confirmAnswerMessage }
-                },
-                [_vm._v("确 定")]
-              )
-            ],
-            1
-          )
         ],
         1
       ),
@@ -693,7 +540,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-1244dc5d", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-b89ea10a", module.exports)
   }
 }
 

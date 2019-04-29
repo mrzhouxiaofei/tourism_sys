@@ -22,6 +22,12 @@ guideline.forEach(function(obj) {
     myRouter.push(obj);
 });
 
+// 评论模块
+import comment from "./comment";
+comment.forEach(function (obj) {
+   myRouter.push(obj);
+});
+
 // 留言模块
 import message from "./message";
 message.forEach(function(obj) {

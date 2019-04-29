@@ -41,8 +41,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
     Route::post('guideline/delete', 'GuidelineController@deleteGuideline');
 
+    // 评论
+    Route::get('comment/lists', 'CommentController@getCommentLists');
+    Route::post('comment/delete', 'CommentController@deleteComment');
+
     // 留言
     Route::get('message/lists', 'MessageController@getMessageLists');
     Route::post('message/delete', 'MessageController@deleteMessage');
     Route::post('message/answer', 'MessageController@answerMessage');
+
+    // 用户
+    Route::get('user/lists', 'UserController@getUserLists');
+    Route::post('user/editStatus', 'UserController@editUserStatus');
 });

@@ -43,4 +43,40 @@ class UserController extends Controller
         $request->session()->flush();
         return redirect('/');
     }
+
+    /**
+     * 修改用户状态
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function editUserStatus(Request $request) {
+        $id = $request->get('id', 0);
+        $status = $request->get('status');
+
+        $res = User::editUserStatus($id, $status);
+
+        if ($res) {
+            return responseToJson(0, '修改成功');
+        } else {
+            return responseToJson(1, '修改失败，请重试');
+        }
+    }
+
+    /**
+     * 获取用户列表
+     * @param Request $request
+     * @return void
+     */
+    public function getUserLists(Request $request) {
+        $pageSize = $request->pageSize;
+        $keyword = $request->keyword;
+
+        $users = User::getUserLists($pageSize, $keyword);
+
+        if (!empty($users)) {
+            return $users;
+        } else {
+            return responseToJson(1, '用户获取失败');
+        }
+    }
 }
