@@ -50,4 +50,38 @@ class Guideline extends Model
             return false;
         }
     }
+
+    /**
+     * 获取单个攻略详情和评论
+     * @param [type] $pageSize
+     * @param [type] $keyword
+     * @return void
+     */
+    public static function getGuidelineDetail($id) {
+        $guideline = DB::table('guidelines')
+            ->where('status', '0')
+            ->where('id', $id)
+            ->get()
+            ->toArray();
+
+        // 获取攻略的评论
+        $comments = DB::table('comments')
+            ->where('status', '0')
+            ->where('guideline_id', $id)
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->toArray();
+
+        if (!empty($guideline)) {
+            if (!empty($comments)) {
+                $guideline['0']->comments = $comments;
+            }
+        }
+
+        if (!empty($guideline)) {
+            return $guideline;
+        } else {
+            return false;
+        }
+    }
 }

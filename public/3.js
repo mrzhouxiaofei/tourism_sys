@@ -1,24 +1,24 @@
 webpackJsonp([3],{
 
-/***/ 245:
+/***/ 247:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(277)
+  __webpack_require__(286)
 }
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(279)
+var __vue_script__ = __webpack_require__(288)
 /* template */
-var __vue_template__ = __webpack_require__(280)
+var __vue_template__ = __webpack_require__(289)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-5dc9e821"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/admin/components/user/List.vue"
+Component.options.__file = "resources/assets/js/front/components/guideline/Detail.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-276b7abb", Component.options)
+    hotAPI.createRecord("data-v-5dc9e821", Component.options)
   } else {
-    hotAPI.reload("data-v-276b7abb", Component.options)
+    hotAPI.reload("data-v-5dc9e821", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 277:
+/***/ 286:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(278);
+var content = __webpack_require__(287);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("b2869790", content, false, {});
+var update = __webpack_require__(8)("75294704", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-276b7abb\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-276b7abb\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
+   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5dc9e821\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5dc9e821\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 278:
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -87,14 +87,14 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.demo-table-expand {\n    font-size: 0;\n}\n.demo-table-expand label {\n    width: 90px;\n    color: #99a9bf;\n}\n.demo-table-expand .el-form-item {\n    margin-right: 0;\n    margin-bottom: 0;\n    width: 50%;\n}\n", ""]);
+exports.push([module.i, "\n.guideline-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.guideline-author[data-v-5dc9e821] {\n    float: right;\n    padding: 3px 0\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 279:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -144,153 +144,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            users: [],
-            keyword: '',
-            pagination: {
-                current: 1,
-                total: 0,
-                pageSize: 20
-            }
+            guideline: [],
+            comments: []
         };
     },
 
     methods: {
-        filterTag: function filterTag(value, row, column) {
-            var property = column['property'];
-            return row[property] === value;
-        },
-        search: function search() {
+        onSave: function onSave() {
+            var _this = this;
+
             var self = this;
-            var params = {
-                page: self.pagination.current,
-                pageSize: self.pagination.pageSize,
-                keyword: self.keyword
-            };
-            axios.get('/admin/user/lists', {
-                params: params
-            }).then(function (res) {
-                if (res) {
-                    self.users = res.data.data;
-                    self.pagination.total = res.data.total;
+            axios.post('/front/guideline/detail', self.area).then(function (res) {
+                console.log(res);
+                if (res.data.code === 0) {
+                    self.$message({
+                        message: res.data.msg,
+                        type: 'success'
+                    });
+                    _this.$router.push({
+                        path: '/area/list'
+                    });
                 } else {
-                    console.log(res.data.msg);
+                    self.$message({
+                        message: res.data.msg,
+                        type: 'warning'
+                    });
                 }
             });
         },
-        editStatus: function editStatus(row) {
+        getData: function getData(id) {
             var self = this;
-            var id = row.id;
-            var status = row.status === '1' ? '0' : '1';
-            this.$confirm('确认执行吗？', '提示', {
-                confirmButtonText: '确定',
-                cancelButtonText: '取消',
-                type: 'warning'
-            }).then(function () {
-                axios.post('/admin/user/editStatus', {
-                    id: id,
-                    status: status
-                }).then(function (res) {
-                    if (res.data.code === 0) {
-                        self.$message({
-                            title: '提示',
-                            message: res.data.msg,
-                            type: 'success'
-                        });
-                        self.search();
-                    } else {
-                        self.$message({
-                            title: '提示',
-                            message: res.data.msg,
-                            type: 'warning'
-                        });
-                    }
-                });
-            }).catch(function () {});
-        },
-        handleSizeChange: function handleSizeChange(val) {
-            this.pagination.pageSize = val;
-            this.search();
-            console.log('\u6BCF\u9875 ' + val + ' \u6761');
-        },
-        handleCurrentChange: function handleCurrentChange(val) {
-            this.pagination.current = val;
-            this.search();
-            console.log('\u5F53\u524D\u9875: ' + val);
+            var param = {
+                id: id
+            };
+            axios.get('/front/guideline/get', {
+                params: param
+            }).then(function (res) {
+                console.log(res);
+                if (res.data.code === 0) {
+                    self.guideline = res.data.result[0];
+                    self.comments = res.data.result[0]['comments'];
+                    console.log(self.guideline);
+                    console.log(self.comments);
+                } else {
+                    self.$message({
+                        message: res.data.msg,
+                        type: 'warning'
+                    });
+                }
+            });
         }
     },
     mounted: function mounted() {
-        this.search();
+        var id = Number.parseInt(this.$route.query.id);
+        if (id > 0) {
+            // 加载对象
+            this.getData(id);
+        }
     }
 });
 
 /***/ }),
 
-/***/ 280:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -300,236 +220,79 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "div",
-        { staticClass: "gm-breadcrumb" },
-        [
-          _c("i", { staticClass: "ion-ios-home gm-home" }),
+      _c("el-card", { attrs: { data: _vm.guideline } }, [
+        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+          _c("span", { staticClass: "guideline-title" }, [
+            _vm._v(_vm._s(_vm.guideline.title))
+          ]),
           _vm._v(" "),
-          _c(
-            "el-breadcrumb",
-            [
-              _c("el-breadcrumb-item", [_vm._v("用户管理")]),
-              _vm._v(" "),
-              _c("el-breadcrumb-item", [_vm._v("用户列表")])
-            ],
-            1
-          )
-        ],
-        1
-      ),
+          _c("span", { staticClass: "guideline-author" }, [
+            _vm._v(
+              _vm._s(_vm.guideline.created_at) +
+                " " +
+                _vm._s(_vm.guideline.author)
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { domProps: { innerHTML: _vm._s(_vm.guideline.content) } })
+      ]),
       _vm._v(" "),
-      _c(
-        "el-form",
-        {
-          attrs: { inline: true },
-          nativeOn: {
-            keydown: function($event) {
-              if (
-                !$event.type.indexOf("key") &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.search($event)
-            }
-          }
-        },
-        [
-          _c(
-            "el-form-item",
-            { attrs: { label: "关键字" } },
-            [
-              _c("el-input", {
-                attrs: { placeholder: "用户名 / 昵称" },
-                model: {
-                  value: _vm.keyword,
-                  callback: function($$v) {
-                    _vm.keyword = $$v
-                  },
-                  expression: "keyword"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-form-item",
-            [
-              _c(
-                "el-button",
-                {
-                  attrs: { type: "primary", icon: "search" },
-                  on: { click: _vm.search }
-                },
-                [_vm._v("查询")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "el-table",
-        { attrs: { data: _vm.users, border: "" } },
-        [
-          _c("el-table-column", {
-            attrs: { type: "expand" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(props) {
-                  return [
-                    _c(
-                      "el-form",
-                      {
-                        staticClass: "demo-table-expand",
-                        attrs: { "label-position": "left" }
-                      },
-                      [
-                        _c(
-                          "el-card",
-                          [
-                            _c("el-form-item", { attrs: { label: "用户名" } }, [
-                              _c("span", [_vm._v(_vm._s(props.row.username))])
-                            ]),
-                            _vm._v(" "),
-                            _c("el-form-item", { attrs: { label: "昵称" } }, [
-                              _c("span", [_vm._v(_vm._s(props.row.nickname))])
-                            ]),
-                            _vm._v(" "),
-                            _c("el-form-item", { attrs: { label: "性别" } }, [
-                              props.row.sex === 0
-                                ? _c("span", [_vm._v("女")])
-                                : props.row.sex === 0
-                                ? _c("span", [_vm._v("男")])
-                                : _c("span", [_vm._v("保密")])
-                            ]),
-                            _vm._v(" "),
-                            _c("el-form-item", { attrs: { label: "手机号" } }, [
-                              _c("span", [_vm._v(_vm._s(props.row.phone))])
-                            ]),
-                            _vm._v(" "),
-                            _c("el-form-item", { attrs: { label: "城市" } }, [
-                              _c("span", [_vm._v(_vm._s(props.row.city))])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "el-form-item",
-                              { attrs: { label: "注册时间" } },
-                              [
-                                _c("span", [
-                                  _vm._v(_vm._s(props.row.created_at))
-                                ])
-                              ]
-                            )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", { attrs: { type: "index", label: "#" } }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "username", label: "用户名" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "nickname", label: "昵称" } }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: {
-              prop: "status",
-              label: "状态",
-              filters: [
-                { text: "正常", value: "0" },
-                { text: "禁用", value: "1" }
-              ],
-              "filter-method": _vm.filterTag
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "el-tag",
-                      {
-                        attrs: {
-                          type: scope.row.status === "0" ? "success" : "danger"
-                        }
-                      },
-                      [
-                        scope.row.status === "0"
-                          ? _c("span", [_vm._v("正常")])
-                          : _c("span", [_vm._v("禁用")])
-                      ]
-                    )
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "操作" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
+      _c("el-card", { attrs: { data: _vm.guideline } }, [
+        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+          _c("span", { staticClass: "guideline-title" }, [_vm._v("评论")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c(
+              "el-form",
+              { attrs: { "label-width": "80px" } },
+              [
+                _c(
+                  "el-form-item",
+                  { attrs: { label: "评论内容" } },
+                  [
+                    _c("el-input", {
+                      attrs: {
+                        type: "textarea",
+                        rows: 4,
+                        placeholder: "限 2000 字内"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "el-form-item",
+                  [
                     _c(
                       "el-button",
-                      {
-                        attrs: {
-                          size: "small",
-                          type: scope.row.status === "0" ? "danger" : "success",
-                          icon: "el-icon-edit"
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.editStatus(scope.row)
-                          }
-                        }
-                      },
-                      [
-                        scope.row.status === "0"
-                          ? _c("span", [_vm._v("禁用")])
-                          : _c("span", [_vm._v("启用")])
-                      ]
+                      { attrs: { type: "primary", size: "small" } },
+                      [_vm._v("提交")]
                     )
-                  ]
-                }
-              }
-            ])
-          })
-        ],
-        1
-      ),
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ]),
       _vm._v(" "),
-      _c("el-pagination", {
-        staticStyle: { padding: "1rem 0" },
-        attrs: {
-          "current-page": _vm.pagination.current,
-          "page-sizes": [10, 20, 50, 100],
-          "page-size": _vm.pagination.pageSize,
-          layout: "total, sizes, prev, pager, next, jumper",
-          total: _vm.pagination.total
-        },
-        on: {
-          "size-change": _vm.handleSizeChange,
-          "current-change": _vm.handleCurrentChange
-        }
-      })
+      _c(
+        "el-card",
+        _vm._l(_vm.comments, function(item, index) {
+          return _c("div", { key: index }, [
+            _c("p", [_vm._v(_vm._s(item.author))])
+          ])
+        }),
+        0
+      )
     ],
     1
   )
@@ -540,7 +303,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-276b7abb", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-5dc9e821", module.exports)
   }
 }
 

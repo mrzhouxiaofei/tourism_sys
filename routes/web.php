@@ -56,3 +56,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('user/lists', 'UserController@getUserLists');
     Route::post('user/editStatus', 'UserController@editUserStatus');
 });
+
+Route::group(['prefix' => 'front'], function () {
+
+    // 攻略
+    Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
+    Route::get('guideline/get', 'GuidelineController@getGuidelineDetail');
+
+});

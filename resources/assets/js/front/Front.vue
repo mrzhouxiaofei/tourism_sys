@@ -8,7 +8,7 @@
                 <!--</div>-->
 
                 <div class="page-content">
-                    <div style="padding:10px 20px 60px;background-color:#fff;">
+                    <div style="width:70%;margin:20px auto;padding:10px 20px 60px;background-color:#fff;">
                         <router-view></router-view>
                     </div>
                     <div style="clear:both;"></div>

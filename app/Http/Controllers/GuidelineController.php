@@ -25,6 +25,23 @@ class GuidelineController extends Controller
     }
 
     /**
+     * 获取单个攻略详情和评论
+     * @param Request $request
+     * @return mixed
+     */
+    public function getGuidelineDetail(Request $request) {
+        $id = $request->id;
+
+        $res = Guideline::getGuidelineDetail($id);
+
+        if (!empty($res)) {
+            return responseToJson(0, 'success', $res);
+        } else {
+            return responseToJson(1, '攻略获取失败');
+        }
+    }
+
+    /**
      * 获取攻略列表
      * @param Request $request
      * @return void

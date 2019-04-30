@@ -1,4 +1,4 @@
-webpackJsonp([11],[
+webpackJsonp([12],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33395,6 +33395,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticStyle: { width: "73%", margin: "0 auto" } },
     [
       _c(
         "el-menu",
@@ -33471,6 +33472,8 @@ var render = function() {
               "div",
               {
                 staticStyle: {
+                  width: "70%",
+                  margin: "20px auto",
                   padding: "10px 20px 60px",
                   "background-color": "#fff"
                 }
@@ -33533,7 +33536,12 @@ __WEBPACK_IMPORTED_MODULE_2__guideline__["a" /* default */].forEach(function (ob
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(246)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(246)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/guideline/detail',
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(247)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 

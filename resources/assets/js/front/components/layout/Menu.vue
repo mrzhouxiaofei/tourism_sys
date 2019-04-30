@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="width: 73%;margin:0 auto;">
         <el-menu default-active="2" class="el-menu-cls" mode="horizontal" @select='handleSelect'>
             <el-menu-item index="/index">首页</el-menu-item>
             <el-menu-item index="/area">旅游地域</el-menu-item>
