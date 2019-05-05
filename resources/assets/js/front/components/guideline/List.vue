@@ -1,15 +1,6 @@
 <template>
     <div>
-        <!--<div class="gm-breadcrumb">-->
-            <!--<i class="ion-ios-home gm-home"></i>-->
-            <!--<el-breadcrumb>-->
-                <!--<el-breadcrumb-item>攻略管理</el-breadcrumb-item>-->
-                <!--<el-breadcrumb-item>攻略列表</el-breadcrumb-item>-->
-            <!--</el-breadcrumb>-->
-        <!--</div>-->
-
         <el-form :inline="true" @keydown.enter.native="search">
-            <!--<el-form-item label="关键字">-->
             <el-form-item label="关键字">
                 <el-input v-model="keyword" placeholder="标题 / 作者"></el-input>
             </el-form-item>
@@ -21,7 +12,7 @@
         <el-table :data="guidelines" border>
             <el-table-column type="index" label="#"></el-table-column>
             <el-table-column prop="title" label="标题"></el-table-column>
-            <!--<el-table-column prop="author" label="作者"></el-table-column>-->
+            <el-table-column prop="author" label="作者"></el-table-column>
             <el-table-column prop="created_at" label="发布时间"></el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">

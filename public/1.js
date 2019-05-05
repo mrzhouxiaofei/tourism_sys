@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -99,15 +99,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -276,6 +267,8 @@ var render = function() {
           _c("el-table-column", { attrs: { type: "index", label: "#" } }),
           _vm._v(" "),
           _c("el-table-column", { attrs: { prop: "title", label: "标题" } }),
+          _vm._v(" "),
+          _c("el-table-column", { attrs: { prop: "author", label: "作者" } }),
           _vm._v(" "),
           _c("el-table-column", {
             attrs: { prop: "created_at", label: "发布时间" }

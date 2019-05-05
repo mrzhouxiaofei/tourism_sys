@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.guideline-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.guideline-author[data-v-5dc9e821] {\n    float: right;\n    padding: 3px 0\n}\n", ""]);
+exports.push([module.i, "\n.guideline-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.guideline-author[data-v-5dc9e821] {\n    float: right;\n    padding: 3px 0\n}\n.comment-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.comment-content[data-v-5dc9e821] {\n    margin: 20px auto;\n    padding: 1px 15px;\n    border-radius: 4px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n}\n.card-panel[data-v-5dc9e821] {\n    margin-top: 20px;\n}\n", ""]);
 
 // exports
 
@@ -144,30 +144,51 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             guideline: [],
-            comments: []
+            comments: [], // 评论列表
+            comment: ''
         };
     },
 
     methods: {
-        onSave: function onSave() {
-            var _this = this;
-
+        postGuidelineComment: function postGuidelineComment() {
             var self = this;
-            axios.post('/front/guideline/detail', self.area).then(function (res) {
+            axios.post('/front/guideline/comment', {
+                guideline_id: self.guideline.id,
+                guideline_title: self.guideline.title,
+                guideline_url: window.location.href,
+                content: self.comment
+            }).then(function (res) {
                 console.log(res);
                 if (res.data.code === 0) {
                     self.$message({
                         message: res.data.msg,
                         type: 'success'
                     });
-                    _this.$router.push({
-                        path: '/area/list'
-                    });
+                    self.getData(self.guideline.id);
                 } else {
                     self.$message({
                         message: res.data.msg,
@@ -220,78 +241,110 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("el-card", { attrs: { data: _vm.guideline } }, [
-        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-          _c("span", { staticClass: "guideline-title" }, [
-            _vm._v(_vm._s(_vm.guideline.title))
+      _c(
+        "el-card",
+        { staticClass: "card-panel", attrs: { data: _vm.guideline } },
+        [
+          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+            _c("span", { staticClass: "guideline-title" }, [
+              _vm._v(_vm._s(_vm.guideline.title))
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "guideline-author" }, [
+              _vm._v(
+                _vm._s(_vm.guideline.created_at) +
+                  " " +
+                  _vm._s(_vm.guideline.author)
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("span", { staticClass: "guideline-author" }, [
-            _vm._v(
-              _vm._s(_vm.guideline.created_at) +
-                " " +
-                _vm._s(_vm.guideline.author)
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { domProps: { innerHTML: _vm._s(_vm.guideline.content) } })
-      ]),
-      _vm._v(" "),
-      _c("el-card", { attrs: { data: _vm.guideline } }, [
-        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-          _c("span", { staticClass: "guideline-title" }, [_vm._v("评论")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c(
-              "el-form",
-              { attrs: { "label-width": "80px" } },
-              [
-                _c(
-                  "el-form-item",
-                  { attrs: { label: "评论内容" } },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        type: "textarea",
-                        rows: 4,
-                        placeholder: "限 2000 字内"
-                      }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "el-form-item",
-                  [
-                    _c(
-                      "el-button",
-                      { attrs: { type: "primary", size: "small" } },
-                      [_vm._v("提交")]
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ]),
+          _c("div", { domProps: { innerHTML: _vm._s(_vm.guideline.content) } })
+        ]
+      ),
       _vm._v(" "),
       _c(
         "el-card",
-        _vm._l(_vm.comments, function(item, index) {
-          return _c("div", { key: index }, [
-            _c("p", [_vm._v(_vm._s(item.author))])
-          ])
-        }),
-        0
+        { staticClass: "card-panel", attrs: { data: _vm.guideline } },
+        [
+          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+            _c("span", { staticClass: "guideline-title" }, [_vm._v("评论")])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _c(
+                "el-form",
+                { attrs: { "label-width": "80px" } },
+                [
+                  _c(
+                    "el-form-item",
+                    { attrs: { label: "评论内容" } },
+                    [
+                      _c("el-input", {
+                        attrs: {
+                          type: "textarea",
+                          rows: 4,
+                          placeholder: "限 2000 字内"
+                        },
+                        model: {
+                          value: _vm.comment,
+                          callback: function($$v) {
+                            _vm.comment = $$v
+                          },
+                          expression: "comment"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-form-item",
+                    [
+                      _c(
+                        "el-button",
+                        {
+                          attrs: { type: "primary", size: "small" },
+                          on: { click: _vm.postGuidelineComment }
+                        },
+                        [_vm._v("提交")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "el-card",
+        { staticClass: "card-panel", attrs: { data: _vm.guideline } },
+        [
+          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+            _c("span", { staticClass: "comment-title" }, [_vm._v("用户评论")])
+          ]),
+          _vm._v(" "),
+          _vm._l(_vm.comments, function(item, index) {
+            return _c("div", { key: index, staticClass: "comment-content" }, [
+              _c("p", [_vm._v(_vm._s(item.author) + " says:")]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(item.content))]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", { staticClass: "el-icon-date" }),
+                _vm._v(" " + _vm._s(item.created_at))
+              ])
+            ])
+          })
+        ],
+        2
       )
     ],
     1

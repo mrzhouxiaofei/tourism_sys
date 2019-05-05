@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Guideline;
 use Illuminate\Http\Request;
 
@@ -56,6 +57,38 @@ class GuidelineController extends Controller
             return $guidelines;
         } else {
             return responseToJson(1, '攻略获取失败');
+        }
+    }
+
+    /**
+     * 提交攻略评论
+     * @param Request $request
+     * @return void
+     */
+    public function postGuidelineComment(Request $request) {
+        $comment['guideline_id'] = $request->get('guideline_id');
+        $comment['guideline_title'] = $request->get('guideline_title');
+        $comment['guideline_url'] = $request->get('guideline_url');
+        $comment['content'] = $request->get('content');
+        $comment['status'] = 0;
+        $comment['created_at'] = getFormatDate();
+
+        if (empty($comment['content'])) {
+            return responseToJson(1, '评论内容不能为空');
+        }
+
+        if (!empty(get_session_user())) {
+            $comment['author'] = get_session_user()->nickname;
+        } else {
+            return responseToJson(1, '请登录后在评论');
+        }
+
+        $res = Comment::postGuidelineComment($comment);
+
+        if ($res) {
+            return responseToJson(0, '保存成功');
+        } else {
+            return responseToJson(1, '保存失败，请重试');
         }
     }
 }

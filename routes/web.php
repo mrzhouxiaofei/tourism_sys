@@ -62,5 +62,6 @@ Route::group(['prefix' => 'front'], function () {
     // 攻略
     Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
     Route::get('guideline/get', 'GuidelineController@getGuidelineDetail');
+    Route::post('guideline/comment', 'GuidelineController@postGuidelineComment');
 
 });

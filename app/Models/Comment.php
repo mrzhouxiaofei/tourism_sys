@@ -50,4 +50,20 @@ class Comment extends Model
             return false;
         }
     }
+
+    /**
+     * 提交攻略评论
+     * @param $user
+     * @return bool
+     */
+    public static function postGuidelineComment($comment) {
+        // 添加
+        $result = DB::table('comments')->insertGetId($comment);
+
+        if (!empty($result)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
