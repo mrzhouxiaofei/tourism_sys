@@ -101,4 +101,20 @@ class Message extends Model
             return false;
         }
     }
+
+    /**
+     * 提交留言
+     * @param $user
+     * @return bool
+     */
+    public static function postMessage($message) {
+        // 添加
+        $result = DB::table('messages')->insertGetId($message);
+
+        if (!empty($result)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -80,7 +80,7 @@ class GuidelineController extends Controller
         if (!empty(get_session_user())) {
             $comment['author'] = get_session_user()->nickname;
         } else {
-            return responseToJson(1, '请登录后在评论');
+            return responseToJson(1, '请登录后再评论');
         }
 
         $res = Comment::postGuidelineComment($comment);

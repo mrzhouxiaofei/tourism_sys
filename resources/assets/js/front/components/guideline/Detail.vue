@@ -8,7 +8,7 @@
             <div v-html="guideline.content"></div>
         </el-card>
 
-        <el-card :data="guideline" class="card-panel">
+        <el-card class="card-panel">
             <div slot="header">
                 <span class="guideline-title">评论</span>
             </div>
@@ -25,7 +25,7 @@
         </el-card>
 
 
-        <el-card :data="guideline" class="card-panel">
+        <el-card class="card-panel">
             <div slot="header">
                 <span class="comment-title">用户评论</span>
             </div>

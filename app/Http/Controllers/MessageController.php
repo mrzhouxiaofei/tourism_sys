@@ -63,4 +63,35 @@ class MessageController extends Controller
             return responseToJson(1, '留言获取失败');
         }
     }
+
+    /**
+     * 提交留言
+     * @param Request $request
+     * @return void
+     */
+    public function postMessage(Request $request) {
+        $message['content'] = $request->get('content');
+        $message['pid'] = 0;
+        $message['type'] = 0;
+        $message['status'] = 0;
+        $message['created_at'] = getFormatDate();
+
+        if (empty($message['content'])) {
+            return responseToJson(1, '留言内容不能为空');
+        }
+
+        if (!empty(get_session_user())) {
+            $message['author'] = get_session_user()->nickname;
+        } else {
+            return responseToJson(1, '请登录后再留言');
+        }
+
+        $res = Message::postMessage($message);
+
+        if ($res) {
+            return responseToJson(0, '保存成功');
+        } else {
+            return responseToJson(1, '保存失败，请重试');
+        }
+    }
 }

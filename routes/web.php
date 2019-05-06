@@ -64,4 +64,8 @@ Route::group(['prefix' => 'front'], function () {
     Route::get('guideline/get', 'GuidelineController@getGuidelineDetail');
     Route::post('guideline/comment', 'GuidelineController@postGuidelineComment');
 
+    // 留言
+    Route::get('message/lists', 'MessageController@getMessageLists');
+    Route::post('message/postMessage', 'MessageController@postMessage');
+
 });

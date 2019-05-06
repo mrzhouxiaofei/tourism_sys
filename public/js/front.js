@@ -1,4 +1,4 @@
-webpackJsonp([12],[
+webpackJsonp([13],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33510,6 +33510,7 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__guideline__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__message__ = __webpack_require__(237);
 
 
 
@@ -33519,6 +33520,12 @@ var myRouter = [];
 // 攻略模块
 
 __WEBPACK_IMPORTED_MODULE_2__guideline__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
+});
+
+// 留言模块
+
+__WEBPACK_IMPORTED_MODULE_3__message__["a" /* default */].forEach(function (obj) {
     myRouter.push(obj);
 });
 
@@ -33536,12 +33543,25 @@ __WEBPACK_IMPORTED_MODULE_2__guideline__["a" /* default */].forEach(function (ob
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(246)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(247)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/guideline/detail',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(247)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}]);
+
+/***/ }),
+/* 237 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// 留言
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/message",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
