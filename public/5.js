@@ -1,24 +1,24 @@
 webpackJsonp([5],{
 
-/***/ 250:
+/***/ 248:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(294)
+  __webpack_require__(287)
 }
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(296)
+var __vue_script__ = __webpack_require__(289)
 /* template */
-var __vue_template__ = __webpack_require__(297)
+var __vue_template__ = __webpack_require__(290)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-5dc9e821"
+var __vue_scopeId__ = "data-v-6b425f7f"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/front/components/guideline/Detail.vue"
+Component.options.__file = "resources/assets/js/front/components/index/Detail.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5dc9e821", Component.options)
+    hotAPI.createRecord("data-v-6b425f7f", Component.options)
   } else {
-    hotAPI.reload("data-v-5dc9e821", Component.options)
+    hotAPI.reload("data-v-6b425f7f", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 294:
+/***/ 287:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(295);
+var content = __webpack_require__(288);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("75294704", content, false, {});
+var update = __webpack_require__(8)("4b7d6cae", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5dc9e821\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5dc9e821\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
+   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6b425f7f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6b425f7f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 295:
+/***/ 288:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -87,14 +87,14 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.guideline-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.guideline-author[data-v-5dc9e821] {\n    float: right;\n    padding: 3px 0\n}\n.comment-title[data-v-5dc9e821] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.comment-content[data-v-5dc9e821] {\n    margin: 20px auto;\n    padding: 1px 15px;\n    border-radius: 4px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n}\n.card-panel[data-v-5dc9e821] {\n    margin-top: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.card-container[data-v-6b425f7f] {\n    overflow: hidden;\n}\n.area-title[data-v-6b425f7f] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.card-panel[data-v-6b425f7f] {\n    margin-top: 20px;\n    float: left;\n}\n.card-panel-left[data-v-6b425f7f] {\n    width: 48%;\n}\n.card-panel-right[data-v-6b425f7f] {\n    width: 48%;\n    margin-left: 2%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 296:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,85 +153,54 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            guideline: [],
-            comments: [], // 评论列表
-            comment: ''
+            guidelines: [],
+            spots: []
         };
     },
 
     methods: {
-        postGuidelineComment: function postGuidelineComment() {
-            var self = this;
-            axios.post('/front/guideline/comment', {
-                guideline_id: self.guideline.id,
-                guideline_title: self.guideline.title,
-                guideline_url: window.location.href,
-                content: self.comment
-            }).then(function (res) {
-                console.log(res);
-                if (res.data.code === 0) {
-                    self.$message({
-                        message: res.data.msg,
-                        type: 'success'
-                    });
-                    self.getData(self.guideline.id);
-                } else {
-                    self.$message({
-                        message: res.data.msg,
-                        type: 'warning'
-                    });
+        spotChange: function spotChange(row) {
+            var id = row.id;
+            this.$router.push({
+                path: '/area',
+                query: {
+                    id: id
                 }
             });
         },
-        getData: function getData(id) {
+        guidelineChange: function guidelineChange(row) {
+            var id = row.id;
+            this.$router.push({
+                path: '/guideline/detail',
+                query: {
+                    id: id
+                }
+            });
+        },
+        getData: function getData() {
             var self = this;
-            var param = {
-                id: id
-            };
-            axios.get('/front/guideline/get', {
-                params: param
-            }).then(function (res) {
-                console.log(res);
-                if (res.data.code === 0) {
-                    self.guideline = res.data.result[0];
-                    self.comments = res.data.result[0]['comments'];
-                    console.log(self.guideline);
-                    console.log(self.comments);
+            axios.get('/front/index/lists').then(function (res) {
+                if (res) {
+                    self.guidelines = res.data.guidelines;
+                    self.spots = res.data.spots;
                 } else {
-                    self.$message({
-                        message: res.data.msg,
-                        type: 'warning'
-                    });
+                    console.log(res.data.msg);
                 }
             });
         }
     },
     mounted: function mounted() {
-        var id = Number.parseInt(this.$route.query.id);
-        if (id > 0) {
-            // 加载对象
-            this.getData(id);
-        }
+        this.getData();
     }
 });
 
 /***/ }),
 
-/***/ 297:
+/***/ 290:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -240,77 +209,28 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "card-container" },
     [
-      _c(
-        "el-card",
-        { staticClass: "card-panel", attrs: { data: _vm.guideline } },
-        [
-          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-            _c("span", { staticClass: "guideline-title" }, [
-              _vm._v(_vm._s(_vm.guideline.title))
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "guideline-author" }, [
-              _vm._v(
-                _vm._s(_vm.guideline.created_at) +
-                  " " +
-                  _vm._s(_vm.guideline.author)
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { domProps: { innerHTML: _vm._s(_vm.guideline.content) } })
-        ]
-      ),
-      _vm._v(" "),
-      _c("el-card", { staticClass: "card-panel" }, [
+      _c("el-card", { staticClass: "card-panel card-panel-left" }, [
         _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-          _c("span", { staticClass: "guideline-title" }, [_vm._v("评论")])
+          _c("span", { staticClass: "area-title" }, [_vm._v("热门景点")])
         ]),
         _vm._v(" "),
         _c(
           "div",
           [
             _c(
-              "el-form",
-              { attrs: { "label-width": "80px" } },
+              "el-table",
+              {
+                attrs: { data: _vm.spots },
+                on: { "row-click": _vm.spotChange }
+              },
               [
-                _c(
-                  "el-form-item",
-                  { attrs: { label: "评论内容" } },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        type: "textarea",
-                        rows: 4,
-                        placeholder: "限 2000 字内"
-                      },
-                      model: {
-                        value: _vm.comment,
-                        callback: function($$v) {
-                          _vm.comment = $$v
-                        },
-                        expression: "comment"
-                      }
-                    })
-                  ],
-                  1
-                ),
+                _c("el-table-column", { attrs: { type: "index", label: "#" } }),
                 _vm._v(" "),
-                _c(
-                  "el-form-item",
-                  [
-                    _c(
-                      "el-button",
-                      {
-                        attrs: { type: "primary", size: "small" },
-                        on: { click: _vm.postGuidelineComment }
-                      },
-                      [_vm._v("提交")]
-                    )
-                  ],
-                  1
-                )
+                _c("el-table-column", {
+                  attrs: { prop: "name", label: "景点" }
+                })
               ],
               1
             )
@@ -319,29 +239,37 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c(
-        "el-card",
-        { staticClass: "card-panel" },
-        [
-          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-            _c("span", { staticClass: "comment-title" }, [_vm._v("用户评论")])
-          ]),
-          _vm._v(" "),
-          _vm._l(_vm.comments, function(item, index) {
-            return _c("div", { key: index, staticClass: "comment-content" }, [
-              _c("p", [_vm._v(_vm._s(item.author) + " says:")]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(item.content))]),
-              _vm._v(" "),
-              _c("p", [
-                _c("i", { staticClass: "el-icon-date" }),
-                _vm._v(" " + _vm._s(item.created_at))
-              ])
-            ])
-          })
-        ],
-        2
-      )
+      _c("el-card", { staticClass: "card-panel card-panel-right" }, [
+        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+          _c("span", { staticClass: "area-title" }, [_vm._v("最新攻略")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c(
+              "el-table",
+              {
+                attrs: { data: _vm.guidelines },
+                on: { "row-click": _vm.guidelineChange }
+              },
+              [
+                _c("el-table-column", { attrs: { type: "index", label: "#" } }),
+                _vm._v(" "),
+                _c("el-table-column", {
+                  attrs: { prop: "title", label: "攻略" }
+                }),
+                _vm._v(" "),
+                _c("el-table-column", {
+                  attrs: { prop: "created_at", label: "发布时间" }
+                })
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ])
     ],
     1
   )
@@ -352,7 +280,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-5dc9e821", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-6b425f7f", module.exports)
   }
 }
 

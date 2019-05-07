@@ -100,4 +100,19 @@ class SpotController extends Controller
             return responseToJson(1, '景点获取失败');
         }
     }
+
+    /**
+     * 获取最新地域、热门攻略
+     * @param Request $request
+     * @return void
+     */
+    public function getHotLists() {
+        $guidelineSpots = Spot::getHotLists();
+
+        if (!empty($guidelineSpots)) {
+            return $guidelineSpots;
+        } else {
+            return responseToJson(1, '首页数据获取失败');
+        }
+    }
 }

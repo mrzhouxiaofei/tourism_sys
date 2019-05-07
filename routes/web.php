@@ -58,6 +58,8 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::group(['prefix' => 'front'], function () {
+    // 首页
+    Route::get('index/lists', 'SpotController@getHotLists');
 
     // 地域
     Route::get('area/lists', 'AreaController@getFormatAreaLists');

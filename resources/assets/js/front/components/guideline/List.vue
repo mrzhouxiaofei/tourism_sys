@@ -71,12 +71,6 @@
                     }
                 });
             },
-            guidelineDetail(row) {
-                let self = this;
-                self.$alert(row['content'], row['title'], {
-                    dangerouslyUseHTMLString: true
-                }).catch(() => {});
-            },
             handleSizeChange(val) {
                 this.pagination.pageSize = val;
                 this.search();

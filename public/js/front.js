@@ -1,4 +1,4 @@
-webpackJsonp([14],[
+webpackJsonp([15],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33405,7 +33405,7 @@ var render = function() {
           on: { select: _vm.handleSelect }
         },
         [
-          _c("el-menu-item", { attrs: { index: "/index" } }, [_vm._v("首页")]),
+          _c("el-menu-item", { attrs: { index: "/" } }, [_vm._v("首页")]),
           _vm._v(" "),
           _c("el-menu-item", { attrs: { index: "/area" } }, [
             _vm._v("旅游地域")
@@ -33548,9 +33548,14 @@ __WEBPACK_IMPORTED_MODULE_4__message__["a" /* default */].forEach(function (obj)
 "use strict";
 // 地域
 /* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
     path: "/area",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33563,12 +33568,12 @@ __WEBPACK_IMPORTED_MODULE_4__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(250)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/guideline/detail',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(250)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(251)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33581,7 +33586,7 @@ __WEBPACK_IMPORTED_MODULE_4__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/message",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(251)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(252)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 

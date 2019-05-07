@@ -72,4 +72,47 @@ class Spot extends Model
             return false;
         }
     }
+
+    /**
+     * 获取最新地域、热门攻略
+     * @param [type] $pageSize
+     * @param [type] $keyword
+     * @return void
+     */
+    public static function getHotLists() {
+        $comments = DB::table('comments')
+            ->where('status', '0')
+            ->select('guideline_id', DB::raw('count(*) as total'))
+            ->groupBy('guideline_id')
+            ->orderBy('total', 'desc')
+            ->limit(10)
+            ->get()
+            ->toArray();
+
+        $ids = array_column($comments,'guideline_id');
+
+        $guidelines = DB::table('guidelines')
+            ->where('status', '0')
+            ->whereIn('id', $ids)
+            ->get()
+            ->toArray();
+
+        $spots = DB::table('spots')
+            ->where('status', '0')
+            ->orderBy('created_at', 'desc')
+            ->limit(10)
+            ->get()
+            ->ToArray();
+
+        $guidelineSpots = array(
+            'guidelines' => $guidelines,
+            'spots' => $spots
+        );
+
+        if (!empty($guidelineSpots)) {
+            return responseToPage($guidelineSpots);
+        } else {
+            return false;
+        }
+    }
 }

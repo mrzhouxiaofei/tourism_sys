@@ -134,6 +134,14 @@
             }
         },
         mounted() {
+            let id = Number.parseInt(this.$route.query.id);
+            if (id > 0) {
+                // 加载对象
+                let arr = new Array;
+                arr[0] = 0;
+                arr.push(id);
+                this.handleChange(arr);
+            }
             this.getData();
         }
     };
