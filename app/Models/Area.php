@@ -67,4 +67,33 @@ class Area extends Model
             return false;
         }
     }
+
+    /**
+     * 获取格式化后的地域列表
+     * @param [type] $pageSize
+     * @param [type] $keyword
+     * @return void
+     */
+    public static function getFormatAreaLists() {
+        $areas = DB::table('areas')
+                ->where('status', '0')
+                ->get()
+                ->toArray();
+
+        $spots = DB::table('spots')
+                ->where('status', '0')
+                ->get()
+                ->ToArray();
+
+        $areaSpots = array(
+            'areas' => $areas,
+            'spots' => $spots
+        );
+
+        if (!empty($areaSpots)) {
+            return responseToPage($areaSpots);
+        } else {
+            return false;
+        }
+    }
 }

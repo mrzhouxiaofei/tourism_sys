@@ -59,6 +59,12 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::group(['prefix' => 'front'], function () {
 
+    // 地域
+    Route::get('area/lists', 'AreaController@getFormatAreaLists');
+
+    // 景点
+    Route::get('spot/get', 'SpotController@getSpot');
+
     // 攻略
     Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
     Route::get('guideline/get', 'GuidelineController@getGuidelineDetail');

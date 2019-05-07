@@ -4,6 +4,12 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 let myRouter = [];
 
+// 地域模块
+import area from "./area";
+area.forEach(function(obj) {
+    myRouter.push(obj);
+});
+
 // 攻略模块
 import guideline from "./guideline";
 guideline.forEach(function(obj) {

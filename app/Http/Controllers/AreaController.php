@@ -106,4 +106,19 @@ class AreaController extends Controller
             return responseToJson(1, '地域获取失败');
         }
     }
+
+    /**
+     * 获取格式化后的地域列表
+     * @param Request $request
+     * @return void
+     */
+    public function getFormatAreaLists() {
+        $areas = Area::getFormatAreaLists();
+
+        if (!empty($areas)) {
+            return $areas;
+        } else {
+            return responseToJson(1, '地域获取失败');
+        }
+    }
 }

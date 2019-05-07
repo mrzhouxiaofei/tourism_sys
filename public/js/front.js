@@ -1,4 +1,4 @@
-webpackJsonp([13],[
+webpackJsonp([14],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33509,23 +33509,30 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__guideline__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__message__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__guideline__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__message__ = __webpack_require__(238);
 
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]);
 var myRouter = [];
 
+// 地域模块
+
+__WEBPACK_IMPORTED_MODULE_2__area__["a" /* default */].forEach(function (obj) {
+    myRouter.push(obj);
+});
+
 // 攻略模块
 
-__WEBPACK_IMPORTED_MODULE_2__guideline__["a" /* default */].forEach(function (obj) {
+__WEBPACK_IMPORTED_MODULE_3__guideline__["a" /* default */].forEach(function (obj) {
     myRouter.push(obj);
 });
 
 // 留言模块
 
-__WEBPACK_IMPORTED_MODULE_3__message__["a" /* default */].forEach(function (obj) {
+__WEBPACK_IMPORTED_MODULE_4__message__["a" /* default */].forEach(function (obj) {
     myRouter.push(obj);
 });
 
@@ -33539,16 +33546,11 @@ __WEBPACK_IMPORTED_MODULE_3__message__["a" /* default */].forEach(function (obj)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// 攻略
+// 地域
 /* harmony default export */ __webpack_exports__["a"] = ([{
-    path: "/guideline",
+    path: "/area",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(247)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
-    }
-}, {
-    path: '/guideline/detail',
-    component: function component(resolve) {
-        return void __webpack_require__.e/* require */(4).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(3).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
@@ -33557,11 +33559,29 @@ __WEBPACK_IMPORTED_MODULE_3__message__["a" /* default */].forEach(function (obj)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// 攻略
+/* harmony default export */ __webpack_exports__["a"] = ([{
+    path: "/guideline",
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/guideline/detail',
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(5).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(250)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}]);
+
+/***/ }),
+/* 238 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 // 留言
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/message",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(251)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 
