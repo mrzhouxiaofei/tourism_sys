@@ -12,8 +12,7 @@ class UserController extends Controller
      * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
-    public function login(Request $request)
-    {
+    public function login(Request $request) {
         if ($request->isMethod('post')) {
             $name = $request->name;
             $pwd = $request->pwd;
@@ -42,6 +41,21 @@ class UserController extends Controller
     public function logout(Request $request) {
         $request->session()->flush();
         return redirect('/');
+    }
+
+    /**
+     * 判断用户是否登陆
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function isLogin() {
+        $user = get_session_user();
+
+        if (!empty($user)) {
+            return responseToJson(0,'success', $user);
+        } else {
+            return responseToJson(1, '用户尚未登录');
+        }
     }
 
     /**

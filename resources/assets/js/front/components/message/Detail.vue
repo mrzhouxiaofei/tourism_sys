@@ -56,9 +56,10 @@
         padding: 1px 15px;
         border-radius: 4px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+        overflow: hidden;
     }
     .answer-content {
-        margin-left: 20%;
+        float: right;
     }
     .card-panel {
         margin-top: 20px;

@@ -1,18 +1,18 @@
 webpackJsonp([1],{
 
-/***/ 252:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(303)
+  __webpack_require__(301)
 }
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(305)
+var __vue_script__ = __webpack_require__(303)
 /* template */
-var __vue_template__ = __webpack_require__(306)
+var __vue_template__ = __webpack_require__(304)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 303:
+/***/ 301:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(304);
+var content = __webpack_require__(302);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("39be8f7b", content, false, {});
+var update = __webpack_require__(11)("39be8f7b", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 304:
+/***/ 302:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -87,18 +87,19 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.message-title[data-v-dd043a2c] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.message-content[data-v-dd043a2c] {\n    margin: 20px auto;\n    padding: 1px 15px;\n    border-radius: 4px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n}\n.answer-content[data-v-dd043a2c] {\n    margin-left: 20%;\n}\n.card-panel[data-v-dd043a2c] {\n    margin-top: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.message-title[data-v-dd043a2c] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.message-content[data-v-dd043a2c] {\n    margin: 20px auto;\n    padding: 1px 15px;\n    border-radius: 4px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n    overflow: hidden;\n}\n.answer-content[data-v-dd043a2c] {\n    float: right;\n}\n.card-panel[data-v-dd043a2c] {\n    margin-top: 20px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 305:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -238,7 +239,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 306:
+/***/ 304:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

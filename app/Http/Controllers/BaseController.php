@@ -21,7 +21,7 @@ class BaseController extends Controller
             }
         }
 
-        return view('login');
+        return view('front.index');
     }
 
     /**

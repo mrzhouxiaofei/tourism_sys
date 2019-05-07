@@ -23,6 +23,7 @@ Route::get('/login', function (){
 });
 Route::post('/login', 'UserController@login');
 Route::get('/logout', 'UserController@logout');
+Route::get('/isLogin', 'UserController@isLogin');
 
 Route::group(['prefix' => 'admin'], function () {
 
