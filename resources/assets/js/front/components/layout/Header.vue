@@ -12,6 +12,7 @@
                 @select='handleSelect'>
             <el-submenu index="user">
                 <template slot="title">个人中心</template>
+                <el-menu-item index="/guideline/edit">发布攻略</el-menu-item>
                 <el-menu-item index="/user/password">修改密码</el-menu-item>
             </el-submenu>
             <el-menu-item index='logout'>退出系统</el-menu-item>

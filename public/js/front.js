@@ -33200,6 +33200,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -33271,6 +33272,10 @@ var render = function() {
                 { attrs: { index: "user" } },
                 [
                   _c("template", { slot: "title" }, [_vm._v("个人中心")]),
+                  _vm._v(" "),
+                  _c("el-menu-item", { attrs: { index: "/guideline/edit" } }, [
+                    _vm._v("发布攻略")
+                  ]),
                   _vm._v(" "),
                   _c("el-menu-item", { attrs: { index: "/user/password" } }, [
                     _vm._v("修改密码")
@@ -33585,12 +33590,17 @@ __WEBPACK_IMPORTED_MODULE_4__message__["a" /* default */].forEach(function (obj)
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: "/guideline",
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(17).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(248)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }, {
     path: '/guideline/detail',
     component: function component(resolve) {
-        return void __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        return void __webpack_require__.e/* require */(19).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(249)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/guideline/edit',
+    component: function component(resolve) {
+        return void __webpack_require__.e/* require */(18).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(310)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
     }
 }]);
 

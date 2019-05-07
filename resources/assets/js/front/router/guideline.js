@@ -8,4 +8,8 @@ export default [
         path: '/guideline/detail',
         component: resolve =>void(require(['../components/guideline/Detail.vue'], resolve))
     },
+    {
+        path: '/guideline/edit',
+        component: resolve =>void(require(['../components/guideline/Edit.vue'], resolve))
+    }
 ];

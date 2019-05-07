@@ -84,4 +84,20 @@ class Guideline extends Model
             return false;
         }
     }
+
+    /**
+     * 发布攻略
+     * @param $user
+     * @return bool
+     */
+    public static function editGuideline($guideline) {
+        //添加
+        $result = DB::table('guidelines')->insertGetId($guideline);
+
+        if (!empty($result)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

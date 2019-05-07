@@ -91,4 +91,38 @@ class GuidelineController extends Controller
             return responseToJson(1, '保存失败，请重试');
         }
     }
+
+    /**
+     * 发布攻略
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function editGuideline(Request $request) {
+        $guideline['title'] = $request->get('title');
+        $guideline['content'] = $request->get('content');
+        $guideline['status'] = 0;
+        $guideline['created_at'] = getFormatDate();
+
+        if (empty($guideline['title'])) {
+            return responseToJson(1, '标题不能为空');
+        }
+
+        if (empty($guideline['content'])) {
+            return responseToJson(1, '正文不能为空');
+        }
+
+        if (!empty(get_session_user())) {
+            $guideline['author'] = get_session_user()->nickname;
+        } else {
+            return responseToJson(1, '请登录后再发布');
+        }
+
+        $res = Guideline::editGuideline($guideline);
+
+        if ($res) {
+            return responseToJson(0, '保存成功');
+        } else {
+            return responseToJson(1, '保存失败，请重试');
+        }
+    }
 }

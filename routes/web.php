@@ -72,6 +72,7 @@ Route::group(['prefix' => 'front'], function () {
     Route::get('guideline/lists', 'GuidelineController@getGuidelineLists');
     Route::get('guideline/get', 'GuidelineController@getGuidelineDetail');
     Route::post('guideline/comment', 'GuidelineController@postGuidelineComment');
+    Route::post('guideline/edit', 'GuidelineController@editGuideline');
 
     // 留言
     Route::get('message/lists', 'MessageController@getMessageLists');
