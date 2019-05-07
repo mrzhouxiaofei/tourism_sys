@@ -1,24 +1,24 @@
 webpackJsonp([5],{
 
-/***/ 246:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(285)
+  __webpack_require__(278)
 }
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(287)
+var __vue_script__ = __webpack_require__(280)
 /* template */
-var __vue_template__ = __webpack_require__(288)
+var __vue_template__ = __webpack_require__(281)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-6b425f7f"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/front/components/index/Detail.vue"
+Component.options.__file = "resources/assets/js/admin/components/message/List.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6b425f7f", Component.options)
+    hotAPI.createRecord("data-v-cea16dc6", Component.options)
   } else {
-    hotAPI.reload("data-v-6b425f7f", Component.options)
+    hotAPI.reload("data-v-cea16dc6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 285:
+/***/ 278:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(286);
+var content = __webpack_require__(279);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(11)("4b7d6cae", content, false, {});
+var update = __webpack_require__(11)("4654779c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6b425f7f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6b425f7f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
+   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-cea16dc6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-cea16dc6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 286:
+/***/ 279:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -87,14 +87,14 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.card-container[data-v-6b425f7f] {\n    overflow: hidden;\n}\n.area-title[data-v-6b425f7f] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.card-panel[data-v-6b425f7f] {\n    margin-top: 20px;\n    float: left;\n}\n.card-panel-left[data-v-6b425f7f] {\n    width: 48%;\n}\n.card-panel-right[data-v-6b425f7f] {\n    width: 48%;\n    margin-left: 2%;\n}\n", ""]);
+exports.push([module.i, "\n.demo-table-expand {\n    font-size: 0;\n}\n.demo-table-expand label {\n    width: 90px;\n    color: #99a9bf;\n}\n.demo-table-expand .el-form-item {\n    margin-right: 0;\n    margin-bottom: 0;\n    width: 50%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 287:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,54 +153,190 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            guidelines: [],
-            spots: []
+            messages: [],
+            answerMessageId: 0,
+            answerMessageFlag: false,
+            comment: '',
+            keyword: '',
+            pagination: {
+                current: 1,
+                total: 0,
+                pageSize: 20
+            }
         };
     },
 
     methods: {
-        spotChange: function spotChange(row) {
-            var id = row.id;
-            this.$router.push({
-                path: '/area',
-                query: {
-                    id: id
-                }
-            });
+        formatter: function formatter(row, column) {
+            if (row.content.length > 15) {
+                return row.content.substring(0, 15) + '~~~';
+            } else {
+                return row.content;
+            }
         },
-        guidelineChange: function guidelineChange(row) {
-            var id = row.id;
-            this.$router.push({
-                path: '/guideline/detail',
-                query: {
-                    id: id
-                }
-            });
-        },
-        getData: function getData() {
+        confirmAnswerMessage: function confirmAnswerMessage() {
+            var _this = this;
+
             var self = this;
-            axios.get('/front/index/lists').then(function (res) {
+            axios.post('/admin/message/answer', {
+                id: self.answerMessageId,
+                content: self.comment
+            }).then(function (res) {
+                if (res.data.code === 0) {
+                    self.$message({
+                        title: '提示',
+                        message: res.data.msg,
+                        type: 'success'
+                    });
+                    self.answerMessageId = 0;
+                    _this.answerMessageFlag = false;
+                    self.search();
+                } else {
+                    self.$message({
+                        title: '提示',
+                        message: res.data.msg,
+                        type: 'warning'
+                    });
+                }
+            });
+        },
+        openAnswerMessage: function openAnswerMessage(id) {
+            this.answerMessageId = id;
+            this.answerMessageFlag = true;
+        },
+        filterTag: function filterTag(value, row, column) {
+            var property = column['property'];
+            return row[property] === value;
+        },
+        search: function search() {
+            var self = this;
+            var params = {
+                page: self.pagination.current,
+                pageSize: self.pagination.pageSize,
+                keyword: self.keyword
+            };
+            axios.get('/admin/message/lists', {
+                params: params
+            }).then(function (res) {
                 if (res) {
-                    self.guidelines = res.data.guidelines;
-                    self.spots = res.data.spots;
+                    self.messages = res.data.data;
+                    console.log(self.messages);
+                    self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
                 }
             });
+        },
+        deleteMessage: function deleteMessage(id) {
+            var self = this;
+            this.$confirm('确认删除吗？', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(function () {
+                axios.post('/admin/message/delete', {
+                    id: id
+                }).then(function (res) {
+                    if (res.data.code === 0) {
+                        self.$message({
+                            title: '提示',
+                            message: res.data.msg,
+                            type: 'success'
+                        });
+                        self.search();
+                    } else {
+                        self.$message({
+                            title: '提示',
+                            message: res.data.msg,
+                            type: 'warning'
+                        });
+                    }
+                });
+            }).catch(function () {});
+        },
+        handleSizeChange: function handleSizeChange(val) {
+            this.pagination.pageSize = val;
+            this.search();
+            console.log('\u6BCF\u9875 ' + val + ' \u6761');
+        },
+        handleCurrentChange: function handleCurrentChange(val) {
+            this.pagination.current = val;
+            this.search();
+            console.log('\u5F53\u524D\u9875: ' + val);
         }
     },
     mounted: function mounted() {
-        this.getData();
+        this.search();
     }
 });
 
 /***/ }),
 
-/***/ 288:
+/***/ 281:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -209,67 +345,355 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card-container" },
     [
-      _c("el-card", { staticClass: "card-panel card-panel-left" }, [
-        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-          _c("span", { staticClass: "area-title" }, [_vm._v("热门景点")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c(
-              "el-table",
-              {
-                attrs: { data: _vm.spots },
-                on: { "row-click": _vm.spotChange }
-              },
-              [
-                _c("el-table-column", { attrs: { type: "index", label: "#" } }),
-                _vm._v(" "),
-                _c("el-table-column", {
-                  attrs: { prop: "name", label: "景点" }
-                })
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ]),
+      _c(
+        "div",
+        { staticClass: "gm-breadcrumb" },
+        [
+          _c("i", { staticClass: "ion-ios-home gm-home" }),
+          _vm._v(" "),
+          _c(
+            "el-breadcrumb",
+            [
+              _c("el-breadcrumb-item", [_vm._v("留言管理")]),
+              _vm._v(" "),
+              _c("el-breadcrumb-item", [_vm._v("留言列表")])
+            ],
+            1
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("el-card", { staticClass: "card-panel card-panel-right" }, [
-        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
-          _c("span", { staticClass: "area-title" }, [_vm._v("最新攻略")])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c(
-              "el-table",
+      _c(
+        "el-form",
+        {
+          attrs: { inline: true },
+          nativeOn: {
+            keydown: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.search($event)
+            }
+          }
+        },
+        [
+          _c(
+            "el-form-item",
+            { attrs: { label: "关键字" } },
+            [
+              _c("el-input", {
+                attrs: { placeholder: "留言人" },
+                model: {
+                  value: _vm.keyword,
+                  callback: function($$v) {
+                    _vm.keyword = $$v
+                  },
+                  expression: "keyword"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-form-item",
+            [
+              _c(
+                "el-button",
+                {
+                  attrs: { type: "primary", icon: "search" },
+                  on: { click: _vm.search }
+                },
+                [_vm._v("查询")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-table",
+        { attrs: { data: _vm.messages, border: "" } },
+        [
+          _c("el-table-column", {
+            attrs: { type: "expand" },
+            scopedSlots: _vm._u([
               {
-                attrs: { data: _vm.guidelines },
-                on: { "row-click": _vm.guidelineChange }
-              },
-              [
-                _c("el-table-column", { attrs: { type: "index", label: "#" } }),
-                _vm._v(" "),
-                _c("el-table-column", {
-                  attrs: { prop: "title", label: "攻略" }
-                }),
-                _vm._v(" "),
-                _c("el-table-column", {
-                  attrs: { prop: "created_at", label: "发布时间" }
-                })
+                key: "default",
+                fn: function(props) {
+                  return [
+                    _c(
+                      "el-form",
+                      {
+                        staticClass: "demo-table-expand",
+                        attrs: { "label-position": "left" }
+                      },
+                      [
+                        _c(
+                          "el-card",
+                          [
+                            _c("el-form-item", { attrs: { label: "留言人" } }, [
+                              _c("span", [_vm._v(_vm._s(props.row.author))])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "el-form-item",
+                              { attrs: { label: "留言时间" } },
+                              [
+                                _c("span", [
+                                  _vm._v(_vm._s(props.row.created_at))
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-form-item",
+                              { attrs: { label: "留言内容" } },
+                              [_c("span", [_vm._v(_vm._s(props.row.content))])]
+                            ),
+                            _vm._v(" "),
+                            props.row.type === "0"
+                              ? _c(
+                                  "el-form-item",
+                                  [
+                                    _c(
+                                      "el-button",
+                                      {
+                                        attrs: {
+                                          size: "small",
+                                          type: "primary"
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.openAnswerMessage(
+                                              props.row.id
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("回 复")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              : _vm._e()
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        props.row.type === "1"
+                          ? _c(
+                              "el-card",
+                              { staticStyle: { "margin-top": "10px" } },
+                              [
+                                _c(
+                                  "el-form-item",
+                                  { attrs: { label: "回复人" } },
+                                  [
+                                    _c("span", [
+                                      _vm._v(_vm._s(props.row.comment.author))
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "el-form-item",
+                                  { attrs: { label: "回复时间" } },
+                                  [
+                                    _c("span", [
+                                      _vm._v(
+                                        _vm._s(props.row.comment.created_at)
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "el-form-item",
+                                  { attrs: { label: "回复内容" } },
+                                  [
+                                    _c("span", [
+                                      _vm._v(_vm._s(props.row.comment.content))
+                                    ])
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", { attrs: { type: "index", label: "#" } }),
+          _vm._v(" "),
+          _c("el-table-column", { attrs: { prop: "author", label: "留言人" } }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              prop: "content",
+              label: "留言内容",
+              formatter: _vm.formatter
+            }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { prop: "created_at", label: "留言时间" }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              prop: "type",
+              label: "状态",
+              filters: [
+                { text: "未回复", value: "0" },
+                { text: "已回复", value: "1" }
               ],
-              1
-            )
-          ],
-          1
-        )
-      ])
+              "filter-method": _vm.filterTag
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "el-tag",
+                      {
+                        attrs: {
+                          type: scope.row.type === "0" ? "danger" : "info"
+                        }
+                      },
+                      [
+                        scope.row.type === "0"
+                          ? _c("span", [_vm._v("未回复")])
+                          : _c("span", [_vm._v("已回复")])
+                      ]
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "操作" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "el-button",
+                      {
+                        attrs: {
+                          size: "small",
+                          type: "danger",
+                          icon: "el-icon-delete"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.deleteMessage(scope.row.id)
+                          }
+                        }
+                      },
+                      [_vm._v("删除")]
+                    )
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: {
+            title: "回复内容",
+            visible: _vm.answerMessageFlag,
+            width: "30%"
+          },
+          on: {
+            "update:visible": function($event) {
+              _vm.answerMessageFlag = $event
+            }
+          }
+        },
+        [
+          _c(
+            "el-form",
+            [
+              _c(
+                "el-form-item",
+                [
+                  _c("el-input", {
+                    attrs: { type: "textarea", rows: 4 },
+                    model: {
+                      value: _vm.comment,
+                      callback: function($$v) {
+                        _vm.comment = $$v
+                      },
+                      expression: "comment"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass: "dialog-footer",
+              attrs: { slot: "footer" },
+              slot: "footer"
+            },
+            [
+              _c(
+                "el-button",
+                {
+                  attrs: { size: "small", type: "primary" },
+                  on: { click: _vm.confirmAnswerMessage }
+                },
+                [_vm._v("确 定")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("el-pagination", {
+        staticStyle: { padding: "1rem 0" },
+        attrs: {
+          "current-page": _vm.pagination.current,
+          "page-sizes": [10, 20, 50, 100],
+          "page-size": _vm.pagination.pageSize,
+          layout: "total, sizes, prev, pager, next, jumper",
+          total: _vm.pagination.total
+        },
+        on: {
+          "size-change": _vm.handleSizeChange,
+          "current-change": _vm.handleCurrentChange
+        }
+      })
     ],
     1
   )
@@ -280,7 +704,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-6b425f7f", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-cea16dc6", module.exports)
   }
 }
 

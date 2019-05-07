@@ -1,24 +1,24 @@
 webpackJsonp([2],{
 
-/***/ 248:
+/***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(293)
+  __webpack_require__(311)
 }
 var normalizeComponent = __webpack_require__(7)
 /* script */
-var __vue_script__ = __webpack_require__(295)
+var __vue_script__ = __webpack_require__(313)
 /* template */
-var __vue_template__ = __webpack_require__(296)
+var __vue_template__ = __webpack_require__(314)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-d678c024"
+var __vue_scopeId__ = "data-v-dd043a2c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/front/components/guideline/List.vue"
+Component.options.__file = "resources/assets/js/front/components/message/Detail.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d678c024", Component.options)
+    hotAPI.createRecord("data-v-dd043a2c", Component.options)
   } else {
-    hotAPI.reload("data-v-d678c024", Component.options)
+    hotAPI.reload("data-v-dd043a2c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 293:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(294);
+var content = __webpack_require__(312);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(11)("06811a0d", content, false, {});
+var update = __webpack_require__(11)("39be8f7b", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d678c024\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d678c024\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./List.vue");
+   module.hot.accept("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd043a2c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/.0.28.11@css-loader/index.js!../../../../../../node_modules/.13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-dd043a2c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/.13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 294:
+/***/ 312:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -87,14 +87,14 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.message-title[data-v-dd043a2c] {\n    font-size: 18px;\n    font-weight: 600;\n}\n.message-content[data-v-dd043a2c] {\n    margin: 20px auto;\n    padding: 1px 15px;\n    border-radius: 4px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);\n    overflow: hidden;\n}\n.answer-content[data-v-dd043a2c] {\n    float: right;\n}\n.card-panel[data-v-dd043a2c] {\n    margin-top: 20px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 295:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -140,11 +140,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            guidelines: [],
+            messages: [],
+            message: '',
             keyword: '',
             pagination: {
                 current: 1,
@@ -155,18 +183,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        search: function search() {
+        postMessage: function postMessage() {
+            var self = this;
+            axios.post('/front/message/postMessage', {
+                content: self.message
+            }).then(function (res) {
+                if (res.data.code === 0) {
+                    self.$message({
+                        message: res.data.msg,
+                        type: 'success'
+                    });
+                    self.getData();
+                } else {
+                    self.$message({
+                        message: res.data.msg,
+                        type: 'warning'
+                    });
+                }
+            });
+        },
+        getData: function getData() {
             var self = this;
             var params = {
                 page: self.pagination.current,
                 pageSize: self.pagination.pageSize,
                 keyword: self.keyword
             };
-            axios.get('/front/guideline/lists', {
+            axios.get('/front/message/lists', {
                 params: params
             }).then(function (res) {
                 if (res) {
-                    self.guidelines = res.data.data;
+                    self.messages = res.data.data;
                     self.pagination.total = res.data.total;
                 } else {
                     console.log(res.data.msg);
@@ -175,23 +222,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         handleSizeChange: function handleSizeChange(val) {
             this.pagination.pageSize = val;
-            this.search();
+            this.getData();
             console.log('\u6BCF\u9875 ' + val + ' \u6761');
         },
         handleCurrentChange: function handleCurrentChange(val) {
             this.pagination.current = val;
-            this.search();
+            this.getData();
             console.log('\u5F53\u524D\u9875: ' + val);
         }
     },
     mounted: function mounted() {
-        this.search();
+        // 加载对象
+        this.getData();
     }
 });
 
 /***/ }),
 
-/***/ 296:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -201,106 +249,99 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "el-form",
-        {
-          attrs: { inline: true },
-          nativeOn: {
-            keydown: function($event) {
-              if (
-                !$event.type.indexOf("key") &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
-              }
-              return _vm.search($event)
-            }
-          }
-        },
-        [
-          _c(
-            "el-form-item",
-            { attrs: { label: "关键字" } },
-            [
-              _c("el-input", {
-                attrs: { placeholder: "标题 / 作者" },
-                model: {
-                  value: _vm.keyword,
-                  callback: function($$v) {
-                    _vm.keyword = $$v
-                  },
-                  expression: "keyword"
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-form-item",
-            [
-              _c(
-                "el-button",
-                {
-                  attrs: { type: "primary", icon: "search" },
-                  on: { click: _vm.search }
-                },
-                [_vm._v("查询")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
+      _c("el-card", { staticClass: "card-panel" }, [
+        _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+          _c("span", { staticClass: "message-title" }, [_vm._v("留言")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c(
+              "el-form",
+              { attrs: { "label-width": "80px" } },
+              [
+                _c(
+                  "el-form-item",
+                  { attrs: { label: "留言内容" } },
+                  [
+                    _c("el-input", {
+                      attrs: {
+                        type: "textarea",
+                        rows: 4,
+                        placeholder: "限 2000 字内"
+                      },
+                      model: {
+                        value: _vm.message,
+                        callback: function($$v) {
+                          _vm.message = $$v
+                        },
+                        expression: "message"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "el-form-item",
+                  [
+                    _c(
+                      "el-button",
+                      {
+                        attrs: { type: "primary", size: "small" },
+                        on: { click: _vm.postMessage }
+                      },
+                      [_vm._v("提交")]
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ]),
       _vm._v(" "),
       _c(
-        "el-table",
-        { attrs: { data: _vm.guidelines, border: "" } },
+        "el-card",
+        { staticClass: "card-panel", attrs: { data: _vm.messages } },
         [
-          _c("el-table-column", { attrs: { type: "index", label: "#" } }),
+          _c("div", { attrs: { slot: "header" }, slot: "header" }, [
+            _c("span", { staticClass: "message-title" }, [_vm._v("用户留言")])
+          ]),
           _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "title", label: "标题" } }),
-          _vm._v(" "),
-          _c("el-table-column", { attrs: { prop: "author", label: "作者" } }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { prop: "created_at", label: "发布时间" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "操作" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: {
-                            path: "/guideline/detail",
-                            query: { id: scope.row.id }
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "el-button",
-                          { attrs: { size: "small", icon: "el-icon-more" } },
-                          [_vm._v("详情")]
-                        )
-                      ],
-                      1
-                    )
-                  ]
-                }
-              }
+          _vm._l(_vm.messages, function(item, index) {
+            return _c("div", { key: index, staticClass: "message-content" }, [
+              _c("p", [_vm._v(_vm._s(item.author) + " says:")]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(item.content))]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", { staticClass: "el-icon-date" }),
+                _vm._v(" " + _vm._s(item.created_at))
+              ]),
+              _vm._v(" "),
+              item.comment
+                ? _c("div", { staticClass: "answer-content" }, [
+                    _c("p", [
+                      _vm._v(_vm._s(item.comment.author) + " answers:")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(item.comment.content))]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("i", { staticClass: "el-icon-date" }),
+                      _vm._v(" " + _vm._s(item.comment.created_at))
+                    ])
+                  ])
+                : _vm._e()
             ])
           })
         ],
-        1
+        2
       ),
       _vm._v(" "),
       _c("el-pagination", {
@@ -327,7 +368,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-d678c024", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-dd043a2c", module.exports)
   }
 }
 
