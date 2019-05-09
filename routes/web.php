@@ -21,6 +21,11 @@ Route::group(['middleware' => ['check.login']], function () {
 Route::get('/login', function (){
     return view('login');
 });
+
+Route::get('/register', function (){
+    return view('register');
+});
+
 Route::post('/login', 'UserController@login');
 Route::get('/logout', 'UserController@logout');
 Route::get('/isLogin', 'UserController@isLogin');
@@ -77,5 +82,4 @@ Route::group(['prefix' => 'front'], function () {
     // 留言
     Route::get('message/lists', 'MessageController@getMessageLists');
     Route::post('message/postMessage', 'MessageController@postMessage');
-
 });

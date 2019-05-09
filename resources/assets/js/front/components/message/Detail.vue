@@ -91,6 +91,7 @@
                             message: res.data.msg,
                             type: 'success'
                         });
+                        self.message = '';
                         self.getData();
                     } else {
                         self.$message({

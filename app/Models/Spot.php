@@ -97,6 +97,16 @@ class Spot extends Model
             ->get()
             ->toArray();
 
+        $formatGuidelines = [];
+
+        foreach ($ids as $id) {
+            foreach ($guidelines as $guideline) {
+                if ($id == $guideline->id) {
+                    array_push($formatGuidelines, $guideline);
+                }
+            }
+        }
+
         $spots = DB::table('spots')
             ->where('status', '0')
             ->orderBy('created_at', 'desc')
@@ -105,7 +115,7 @@ class Spot extends Model
             ->ToArray();
 
         $guidelineSpots = array(
-            'guidelines' => $guidelines,
+            'guidelines' => $formatGuidelines,
             'spots' => $spots
         );
 

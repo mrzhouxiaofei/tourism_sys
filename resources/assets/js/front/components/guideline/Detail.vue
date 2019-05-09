@@ -86,6 +86,7 @@
                             message: res.data.msg,
                             type: 'success'
                         });
+                        self.comment = '';
                         self.getData(self.guideline.id);
                     } else {
                         self.$message({

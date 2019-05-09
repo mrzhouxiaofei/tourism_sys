@@ -73,7 +73,6 @@
                     self.spot.created_at = '';
                     return;
                 }
-
                 let param = {
                     id: value.pop()
                 };
@@ -94,7 +93,6 @@
             },
             formatAreaSpot(areaSpots) {
                 let result = [];
-
                 areaSpots['areas'].forEach(function(value) {
                     let spots = [];
                     areaSpots['spots'].forEach(function(val) {
@@ -105,7 +103,6 @@
                             });
                         }
                     }, spots);
-
                     if (spots.length > 0) {
                         result.push({
                             'value': value['id'],
@@ -119,7 +116,6 @@
                         });
                     }
                 }, result);
-
                 return result;
             },
             getData() {

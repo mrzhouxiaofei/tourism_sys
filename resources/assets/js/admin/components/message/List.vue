@@ -150,6 +150,7 @@
                         });
                         self.answerMessageId = 0;
                         this.answerMessageFlag = false;
+                        self.comment = '';
                         self.search();
                     } else {
                         self.$message({
