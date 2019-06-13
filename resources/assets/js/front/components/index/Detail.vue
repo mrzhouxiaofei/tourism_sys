@@ -2,7 +2,7 @@
     <div class="card-container">
         <el-card class="card-panel card-panel-left">
             <div slot="header">
-                <span class="area-title">热门景点</span>
+                <span class="area-title">最新景点</span>
             </div>
             <div>
                 <el-table
@@ -16,7 +16,7 @@
 
         <el-card class="card-panel card-panel-right">
             <div slot="header">
-                <span class="area-title">最新攻略</span>
+                <span class="area-title">热门攻略</span>
             </div>
             <div>
                 <el-table
